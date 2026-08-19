@@ -1,1732 +1,418 @@
 <!doctype html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="referrer" content="no-referrer">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline' 'unsafe-eval' 'wasm-unsafe-eval' blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; style-src 'unsafe-inline' blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; img-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; font-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; media-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; worker-src blob:; connect-src blob: data:; frame-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
-<title>Kubernetes Ai Gateway Kind Map</title>
-<style>:root{color-scheme:light dark;background:light-dark(rgb(255 255 255), rgb(24 24 24))}html,body{margin:0}body{box-sizing:border-box;padding:1rem;background:inherit}iframe{display:block;width:100%;height:calc(100vh - 2rem);margin:0 auto;border:0}</style>
-</head>
-<body>
-<iframe sandbox="allow-scripts" referrerpolicy="no-referrer" title="Kubernetes Ai Gateway Kind Map" srcdoc="&lt;!doctype html&gt;
-&lt;html lang=&quot;en&quot;&gt;
-&lt;head&gt;
-&lt;meta charset=&quot;utf-8&quot;&gt;
-&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
-&lt;meta name=&quot;referrer&quot; content=&quot;no-referrer&quot;&gt;
-&lt;meta http-equiv=&quot;Content-Security-Policy&quot; content=&quot;default-src &#x27;none&#x27;; script-src &#x27;unsafe-inline&#x27; &#x27;unsafe-eval&#x27; &#x27;wasm-unsafe-eval&#x27; blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; style-src &#x27;unsafe-inline&#x27; blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; img-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; font-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; media-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; worker-src blob:; connect-src blob: data:; frame-src &#x27;none&#x27;; object-src &#x27;none&#x27;; base-uri &#x27;none&#x27;; form-action &#x27;none&#x27;&quot;&gt;
-&lt;title&gt;Kubernetes Ai Gateway Kind Map&lt;/title&gt;
-&lt;style&gt;:root {
-  color-scheme: light dark;
-  background-color: var(
-    --background,
-    var(--color-background-primary, light-dark(rgb(255 255 255), rgb(24 24 24)))
-  ) !important;
-
-  /* Agent-facing contract; keep in sync with SKILL.md. */
-  --background: var(
-    --color-background-primary,
-    light-dark(rgb(255 255 255), rgb(24 24 24))
-  );
-  --foreground: var(
-    --color-text-primary,
-    light-dark(rgb(26 28 31), rgb(255 255 255))
-  );
-  --card: color-mix(in oklab, var(--foreground) 5%, var(--background));
-  --card-foreground: var(
-    --color-text-primary,
-    light-dark(rgb(26 28 31), rgb(255 255 255))
-  );
-  --popover: var(
-    --color-background-secondary,
-    light-dark(rgb(255 255 255), rgb(45 45 45))
-  );
-  --popover-foreground: var(
-    --color-text-primary,
-    light-dark(rgb(26 28 31), rgb(255 255 255))
-  );
-  --primary: var(
-    --color-text-info,
-    light-dark(rgb(51 156 255), rgb(131 195 255))
-  );
-  --primary-foreground: var(
-    --color-text-inverse,
-    light-dark(rgb(255 255 255), rgb(13 13 13))
-  );
-  --secondary: var(
-    --color-background-secondary,
-    light-dark(rgb(255 255 255 / 96%), rgb(54 54 54 / 96%))
-  );
-  --secondary-foreground: var(
-    --color-text-primary,
-    light-dark(rgb(26 28 31), rgb(255 255 255))
-  );
-  --muted: color-mix(in srgb, var(--foreground) 10%, transparent);
-  --muted-foreground: var(
-    --color-text-secondary,
-    light-dark(rgb(26 28 31 / 49.4%), rgb(255 255 255 / 49.8%))
-  );
-  --accent: var(
-    --color-background-info,
-    light-dark(rgb(229 242 255), rgb(13 39 63))
-  );
-  --accent-foreground: var(
-    --color-text-info,
-    light-dark(rgb(51 156 255), rgb(131 195 255))
-  );
-  --destructive: var(
-    --color-text-warning,
-    light-dark(rgb(226 85 7), rgb(255 133 73))
-  );
-  --border: var(
-    --color-border-secondary,
-    light-dark(rgb(26 28 31 / 8%), rgb(255 255 255 / 8.2%))
-  );
-  --input: var(
-    --color-border-primary,
-    light-dark(
-      rgb(26 28 31 / 11.8%),
-      color-mix(in oklab, rgb(0 0 0) 10%, transparent)
-    )
-  );
-  --ring: var(
-    --color-ring-primary,
-    light-dark(rgb(51 156 255), rgb(131 195 255 / 76%))
-  );
-  --font-size-base: var(--font-text-md-size, 14px);
-  --blue: light-dark(rgb(51 156 255), rgb(51 156 255));
-  --orange: light-dark(rgb(226 85 7), rgb(251 106 34));
-  --green: light-dark(rgb(0 162 64), rgb(64 201 119));
-  --red: light-dark(rgb(224 46 42), rgb(255 103 100));
-  --purple: light-dark(rgb(146 79 247), rgb(173 123 249));
-  --yellow: light-dark(rgb(255 195 0), rgb(255 210 64));
-  --viz-series-1: var(--primary);
-  --viz-series-2: light-dark(rgb(243 136 59), rgb(245 154 86));
-  --viz-series-3: light-dark(rgb(93 201 119), rgb(116 213 139));
-  --viz-series-4: light-dark(rgb(235 119 177), rgb(240 143 192));
-  --viz-series-5: light-dark(rgb(155 121 236), rgb(170 145 239));
-  --viz-series-6: light-dark(rgb(58 185 177), rgb(90 203 194));
-
-  /* Internal implementation variables; not part of the agent contract. */
-  --font-sans: -apple-system, system-ui, &quot;Segoe UI&quot;, sans-serif;
-  --font-mono:
-    ui-monospace, SFMono-Regular, &quot;SF Mono&quot;, Menlo, Consolas, &quot;Liberation Mono&quot;,
-    monospace;
-  --font-size-normal: max(11px, var(--font-size-base));
-  --font-size-tooltip: calc(var(--font-size-base) - 1px);
-  --font-size-small: max(11px, calc(var(--font-size-base) - 2px));
-  --font-size-h1: calc(var(--font-size-normal) * 1.7142857143);
-  --font-size-h2: calc(var(--font-size-normal) * 1.4285714286);
-  --font-size-h3: calc(var(--font-size-normal) * 1.2857142857);
-  --font-weight-normal: 430;
-  --font-weight-medium: 500;
-  --line-height-normal: calc(var(--font-size-normal) * 1.5);
-  --line-height-tooltip: calc(var(--font-size-tooltip) * 1.4285714286);
-  --line-height-small: calc(var(--font-size-small) + 4px);
-  --radius: var(--border-radius-lg, 12.5px);
-  --radius-sm: calc(var(--radius) * 0.6);
-  --radius-md: calc(var(--radius) * 0.8);
-  --radius-lg: var(--radius);
-  --radius-2xl: calc(var(--radius) * 1.6);
-  --radius-full: 9999px;
-  --shadow-sm: 0 1px 2px -1px rgb(0 0 0 / 8%);
-  --checkmark-image: url(&quot;data:image/svg+xml,%3Csvg xmlns=&#x27;http://www.w3.org/2000/svg&#x27; viewBox=&#x27;0 0 17 17&#x27;%3E%3Cpath d=&#x27;M12.8961 3.64101C13.1297 3.41418 13.4984 3.37523 13.7779 3.56581C14.0571 3.75635 14.1554 4.11331 14.0299 4.41347L13.9615 4.53847L7.71151 13.7045C7.59411 13.8767 7.4063 13.9877 7.19881 14.0072C6.99136 14.0267 6.78564 13.9533 6.63826 13.806L2.88826 10.056L2.79842 9.9457C2.6192 9.67407 2.64927 9.30496 2.88826 9.06581C3.12738 8.82669 3.49647 8.79676 3.76815 8.97597L3.8785 9.06581L7.03084 12.2182L12.8053 3.74941L12.8961 3.64101Z&#x27;/%3E%3C/svg%3E&quot;);
-
-  /* Legacy aliases; not part of the current agent contract. */
-  --viz-bg: transparent;
-  --viz-panel: var(--card);
-  --viz-border: var(--border);
-  --viz-text: var(--foreground);
-  --viz-muted: var(--muted-foreground);
-  --viz-accent: var(--primary);
-  --viz-accent-text: var(--primary-foreground);
-  --viz-accent-bg: var(--accent);
-  --viz-font-size: var(--font-size-base);
-  --viz-warning: var(--destructive);
-}
-
-:root[data-theme=&quot;light&quot;] {
-  color-scheme: light;
-}
-
-:root[data-theme=&quot;dark&quot;] {
-  color-scheme: dark;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-html &gt; body {
-  /* Preserve MCP aliases for older inline renderers without creating :root cycles. */
-  --color-background-primary: var(
-    --background,
-    light-dark(rgb(255 255 255), rgb(24 24 24))
-  );
-  --color-text-primary: var(
-    --foreground,
-    light-dark(rgb(26 28 31), rgb(255 255 255))
-  );
-  --color-border-secondary: var(
-    --border,
-    light-dark(rgb(26 28 31 / 8%), rgb(255 255 255 / 8.2%))
-  );
-
-  margin: 0;
-  padding: 5px;
-  color: var(--foreground);
-  background: transparent !important;
-  font-family: var(--font-sans);
-  font-size: var(--font-size-normal);
-  font-weight: var(--font-weight-normal);
-  line-height: var(--line-height-normal);
-}
-
-a {
-  color: color-mix(in srgb, var(--viz-accent) 80%, var(--viz-text) 20%);
-  cursor: pointer;
-  font-weight: var(--font-weight-medium, 500);
-  text-decoration: none;
-  text-underline-offset: 2px;
-}
-
-a:is(:hover, :focus-visible) {
-  text-decoration-line: underline;
-  text-decoration-style: dashed;
-  text-decoration-thickness: 0.5px;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
-  margin-block: 0;
-}
-
-h1 {
-  font-size: var(--font-size-h1);
-  font-weight: var(--font-weight-medium);
-  line-height: 1.25;
-}
-
-h2 {
-  font-size: var(--font-size-h2);
-  font-weight: var(--font-weight-medium);
-  line-height: 1.25;
-}
-
-h3,
-h4,
-h5,
-h6 {
-  font-size: var(--font-size-h3);
-  font-weight: var(--font-weight-medium);
-  line-height: 1.3;
-}
-
-b,
-strong,
-th {
-  font-weight: var(--font-weight-medium);
-}
-
-code:not(pre code) {
-  display: inline;
-  padding: 1px 6px;
-  border-radius: var(--radius-sm);
-  corner-shape: superellipse(1.5);
-  background: var(--muted);
-  font-family: var(--font-mono);
-  font-size: 0.92em;
-  overflow-wrap: anywhere;
-  -webkit-box-decoration-break: clone;
-  box-decoration-break: clone;
-  word-break: break-word;
-}
-
-.table-responsive {
-  width: 100%;
-  overflow-x: auto;
-  scrollbar-width: thin;
-}
-
-.table {
-  width: 100%;
-  border-collapse: collapse;
-  color: var(--foreground);
-  font: inherit;
-  text-align: start;
-}
-
-.table :is(th, td) {
-  padding-block: 10px;
-  padding-inline: 0 24px;
-  overflow-wrap: anywhere;
-  border-bottom: 1px solid var(--border);
-  text-align: start;
-  vertical-align: top;
-}
-
-.table-responsive &gt; .table :is(th, td) {
-  overflow-wrap: break-word;
-}
-
-.table :is(th, td):last-child {
-  padding-inline-end: 0;
-}
-
-.table :is(caption, thead th) {
-  font-weight: 600;
-}
-
-.table thead th {
-  padding-block: 8px;
-  border-bottom-color: color-mix(in srgb, var(--foreground) 16%, transparent);
-}
-
-.table tbody tr:last-child :is(th, td) {
-  border-bottom: 0;
-}
-
-.table.table-sm :is(th, td) {
-  padding-block: 6px;
-}
-
-.table.table-sm :is(th, td):not(:last-child) {
-  padding-inline-end: 16px;
-}
-
-.table :is(.text-end, [align=&quot;right&quot;]) {
-  text-align: end;
-  font-variant-numeric: tabular-nums;
-}
-
-.table :is(.text-center, [align=&quot;center&quot;]) {
-  text-align: center;
-}
-
-.table .text-nowrap {
-  white-space: nowrap;
-}
-
-#widget {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  width: 100%;
-  padding: 0;
-  background: transparent !important;
-}
-
-.card {
-  min-width: 0;
-  padding: 12px;
-  overflow: hidden;
-  overflow-wrap: break-word;
-  border-radius: var(--radius-2xl);
-  corner-shape: superellipse(1.5);
-  color: var(--card-foreground);
-  background: var(--card);
-}
-
-#widget &gt; :not(.card) {
-  width: 100% !important;
-  max-width: none !important;
-  margin: 0 !important;
-  padding: 0 !important;
-  border: 0 !important;
-  border-radius: 0 !important;
-  background: transparent !important;
-  box-shadow: none !important;
-}
-
-.tooltip {
-  position: fixed;
-  z-index: 50;
-  top: 0;
-  left: 0;
-  width: max-content;
-  max-width: min(
-    20rem,
-    var(--tooltip-available-width, calc(100vw - 10px)),
-    calc(100vw - 10px)
-  );
-  max-height: min(
-    var(--tooltip-available-height, calc(100vh - 10px)),
-    calc(100vh - 10px)
-  );
-  padding: 4px 8px;
-  border: 1px solid var(--border);
-  border-radius: var(--radius-lg);
-  corner-shape: superellipse(1.5);
-  color: var(--popover-foreground);
-  background: var(--popover);
-  box-shadow: none;
-  font-size: var(--font-size-tooltip);
-  line-height: var(--line-height-tooltip);
-  overflow-wrap: break-word;
-  white-space: normal;
-  pointer-events: none;
-  user-select: none;
-}
-
-.viz-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(max(180px, 24%), 1fr));
-  gap: 10px;
-}
-
-.viz-stat {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-}
-
-.viz-stat-value {
-  font-size: var(--font-size-h2);
-  font-weight: var(--font-weight-medium);
-  line-height: 1.25;
-}
-
-.viz-row {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 10px;
-}
-
-.viz-badge {
-  padding: 3px 8px;
-  border-radius: var(--radius-full);
-  color: var(--accent-foreground);
-  background: var(--accent);
-  font-weight: var(--font-weight-medium);
-}
-
-small,
-.text-small,
-.viz-badge {
-  font-size: var(--font-size-small);
-  line-height: var(--line-height-small);
-}
-
-.text-muted {
-  color: var(--muted-foreground);
-}
-
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border: 0;
-}
-
-.viz-controls {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 8px;
-}
-
-.viz-controls &gt; .form-label {
-  display: grid;
-  min-width: min(100%, 260px);
-  flex: 1 1 280px;
-  grid-template-columns: minmax(0, 1fr) auto;
-  align-items: baseline;
-  gap: 2px 12px;
-  margin-bottom: 0;
-}
-
-.viz-controls &gt; .form-label &gt; :is(.form-control, .form-range, .form-select) {
-  grid-column: 1 / -1;
-}
-
-.btn,
-.form-check-input,
-.form-control,
-.form-range,
-.form-select {
-  font: inherit;
-}
-
-.btn {
-  appearance: button;
-  display: inline-flex;
-  inline-size: fit-content;
-  max-inline-size: 100%;
-  min-height: 28px;
-  align-items: center;
-  justify-content: center;
-  gap: 4px;
-  margin: 0;
-  padding: 0 8px;
-  -webkit-app-region: no-drag;
-  border: 1px solid var(--input);
-  border-radius: var(--radius-lg);
-  corner-shape: superellipse(1.5);
-  color: var(--secondary-foreground);
-  background: var(--secondary);
-  cursor: var(--cursor-interaction, pointer);
-  text-align: center;
-  text-decoration: none;
-  white-space: nowrap;
-  user-select: none;
-  -webkit-font-smoothing: antialiased;
-}
-
-.btn:is(.btn-block, .viz-tile) {
-  inline-size: 100%;
-}
-
-.btn.viz-tile {
-  min-width: 0;
-  overflow-wrap: anywhere;
-  white-space: normal;
-}
-
-a.btn {
-  cursor: pointer;
-  text-decoration: none;
-}
-
-.btn:not(:disabled):hover {
-  background: color-mix(in srgb, var(--foreground) 6%, var(--secondary));
-}
-
-.btn-primary {
-  border-color: transparent;
-  color: var(--primary-foreground);
-  background: var(--foreground);
-  background-clip: padding-box;
-}
-
-.btn-primary .text-muted {
-  color: color-mix(in srgb, var(--primary-foreground) 50%, transparent);
-}
-
-.btn-primary:not(:disabled):hover {
-  background: color-mix(in srgb, var(--foreground) 80%, transparent);
-  background-clip: padding-box;
-}
-
-.btn-ghost {
-  border-color: transparent;
-  color: var(--muted-foreground);
-  background: transparent;
-}
-
-.btn-ghost:not(:disabled):hover {
-  color: var(--foreground);
-  background: color-mix(in srgb, var(--foreground) 6%, var(--secondary));
-}
-
-.btn:disabled {
-  cursor: not-allowed;
-  opacity: 0.4;
-}
-
-[data-lucide] {
-  stroke-width: 1.6;
-}
-
-.form-label {
-  display: block;
-  margin-bottom: 6px;
-  color: var(--foreground);
-}
-
-.form-control {
-  display: block;
-  width: 100%;
-  min-height: 28px;
-  padding: 0 8px;
-  outline: none;
-  border: 1px solid var(--input);
-  border-radius: var(--radius-lg);
-  corner-shape: superellipse(1.5);
-  color: var(--foreground);
-  background: var(--secondary);
-}
-
-.form-control::placeholder {
-  color: var(--muted-foreground);
-}
-
-.form-control[type=&quot;file&quot;] {
-  padding: 0;
-  overflow: hidden;
-  cursor: var(--cursor-interaction, pointer);
-}
-
-.form-control[type=&quot;file&quot;]::file-selector-button {
-  min-height: 26px;
-  margin-right: 8px;
-  padding: 0 8px;
-  border: 0;
-  border-right: 1px solid var(--input);
-  color: var(--secondary-foreground);
-  background: var(--secondary);
-  cursor: inherit;
-  font: inherit;
-}
-
-.form-control[type=&quot;file&quot;]:not(:disabled):hover::file-selector-button {
-  background: color-mix(in srgb, var(--foreground) 6%, var(--secondary));
-}
-
-.form-control-color[type=&quot;color&quot;] {
-  width: 40px;
-  height: 28px;
-  padding: 3px;
-  cursor: var(--cursor-interaction, pointer);
-}
-
-.form-control-color[type=&quot;color&quot;]::-webkit-color-swatch-wrapper {
-  padding: 0;
-}
-
-.form-control-color[type=&quot;color&quot;]::-webkit-color-swatch {
-  border: 0;
-  border-radius: calc(var(--radius-lg) - 4px);
-  corner-shape: superellipse(1.5);
-}
-
-textarea.form-control {
-  height: auto;
-  min-height: 72px;
-  padding: 8px 10px;
-  resize: vertical;
-}
-
-.form-control:focus-visible {
-  border-color: var(--ring);
-  box-shadow: inset 0 0 0 1px var(--ring);
-}
-
-.form-control:disabled,
-.form-select:disabled {
-  cursor: not-allowed;
-  opacity: 0.4;
-}
-
-.form-select {
-  appearance: none;
-  display: block;
-  width: 100%;
-  min-height: 28px;
-  margin: 0;
-  padding: 0 32px 0 8px;
-  outline: none;
-  border: 1px solid var(--input);
-  border-radius: var(--radius-lg);
-  corner-shape: superellipse(1.5);
-  color: var(--foreground);
-  background-color: var(--secondary);
-  background-image:
-    linear-gradient(45deg, transparent 50%, var(--muted-foreground) 50%),
-    linear-gradient(135deg, var(--muted-foreground) 50%, transparent 50%);
-  background-position:
-    calc(100% - 14px) 50%,
-    calc(100% - 10px) 50%;
-  background-repeat: no-repeat;
-  background-size: 4px 4px;
-  cursor: var(--cursor-interaction, default);
-}
-
-.form-select:not(:disabled):hover {
-  background-color: color-mix(in srgb, var(--foreground) 6%, var(--secondary));
-}
-
-.form-select:focus-visible {
-  border-color: var(--ring);
-  box-shadow: inset 0 0 0 1px var(--ring);
-}
-
-.form-check {
-  display: flex;
-  min-height: 20px;
-  align-items: center;
-  gap: 6px;
-}
-
-.form-check-input {
-  appearance: none;
-  width: 14px;
-  height: 14px;
-  flex: 0 0 auto;
-  margin: 0;
-  border: 1px solid var(--input);
-  color: var(--primary-foreground);
-  background-color: transparent;
-  cursor: var(--cursor-interaction, default);
-  transition:
-    background-color 150ms,
-    border-color 150ms,
-    box-shadow 150ms;
-}
-
-.form-check:not(.form-switch) .form-check-input[type=&quot;checkbox&quot;] {
-  border-color: var(--input);
-  border-radius: var(--radius-sm);
-  corner-shape: superellipse(1.5);
-  background-color: var(--secondary);
-  box-shadow: var(--shadow-sm);
-}
-
-.form-check:not(.form-switch)
-  .form-check-input:not(:disabled):not(:checked):hover {
-  background-color: var(--card);
-}
-
-.form-check:not(.form-switch) .form-check-input[type=&quot;checkbox&quot;]:checked {
-  border-color: var(--primary);
-  background-color: var(--primary);
-}
-
-.form-check:not(.form-switch)
-  .form-check-input[type=&quot;checkbox&quot;]:checked::before {
-  display: block;
-  width: 100%;
-  height: 100%;
-  background: var(--primary-foreground);
-  content: &quot;&quot;;
-  mask: var(--checkmark-image) center / 12px 12px no-repeat;
-}
-
-.form-check-input[type=&quot;radio&quot;] {
-  width: 14px;
-  height: 14px;
-  border-radius: var(--radius-full);
-}
-
-.form-check-input[type=&quot;radio&quot;]:checked {
-  border: 2px solid var(--primary);
-  background:
-    radial-gradient(circle, var(--primary-foreground) 0 2.5px, transparent 3px),
-    var(--primary);
-}
-
-.form-check:not(.form-switch) .form-check-input:focus-visible {
-  outline: 2px solid var(--ring);
-  outline-offset: 2px;
-}
-
-.form-check:not(.form-switch) .form-check-input:disabled {
-  cursor: not-allowed;
-  pointer-events: none;
-}
-
-.form-check:not(.form-switch) .form-check-input:disabled + .form-check-label {
-  cursor: not-allowed;
-}
-
-.form-switch .form-check-input:disabled,
-.form-switch .form-check-input:disabled + .form-check-label {
-  cursor: not-allowed;
-  opacity: 0.6;
-}
-
-.form-check-label {
-  color: var(--foreground);
-  cursor: var(--cursor-interaction, default);
-}
-
-.form-switch .form-check-input {
-  position: relative;
-  width: 32px;
-  height: 20px;
-  border: 0;
-  border-radius: var(--radius-full);
-  background: var(--muted);
-  box-shadow: none;
-  transition: background-color 200ms cubic-bezier(0, 0, 0.2, 1);
-}
-
-.form-switch .form-check-input::before {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  width: 16px;
-  height: 16px;
-  box-sizing: border-box;
-  border: 1px solid light-dark(var(--primary-foreground), var(--foreground));
-  border-radius: var(--radius-full);
-  background: light-dark(var(--primary-foreground), var(--foreground));
-  box-shadow: var(--shadow-sm);
-  content: &quot;&quot;;
-  transform: translate(2px, -50%);
-  transition: transform 200ms cubic-bezier(0, 0, 0.2, 1);
-}
-
-.form-switch .form-check-input:checked {
-  background: var(--primary);
-}
-
-.form-switch .form-check-input:checked::before {
-  transform: translate(14px, -50%);
-}
-
-.form-switch .form-check-input:focus-visible {
-  box-shadow: 0 0 0 2px var(--ring);
-}
-
-.form-range {
-  appearance: none;
-  display: block;
-  width: 100%;
-  height: 28px;
-  flex: 1;
-  margin: 0;
-  padding: 0;
-  outline: none;
-  border: 0;
-  accent-color: var(--primary);
-  background: linear-gradient(
-      color-mix(in srgb, var(--foreground) 7%, transparent),
-      color-mix(in srgb, var(--foreground) 7%, transparent)
-    )
-    center / 100% 2px no-repeat;
-}
-
-.form-range::-webkit-slider-runnable-track {
-  height: 28px;
-  background: transparent;
-}
-
-.form-range::-webkit-slider-thumb {
-  appearance: none;
-  width: 20px;
-  height: 20px;
-  margin-top: 4px;
-  border: 1px solid var(--border);
-  border-radius: var(--radius-full);
-  background: light-dark(var(--primary-foreground), var(--foreground));
-}
-
-.form-range:focus-visible::-webkit-slider-thumb {
-  border-color: var(--ring);
-  box-shadow: inset 0 0 0 1px var(--ring);
-}
-
-.form-range::-moz-range-track {
-  height: 28px;
-  background: transparent;
-}
-
-.form-range::-moz-range-thumb {
-  width: 20px;
-  height: 20px;
-  border: 1px solid var(--border);
-  border-radius: var(--radius-full);
-  background: light-dark(var(--primary-foreground), var(--foreground));
-}
-
-.form-range:focus-visible::-moz-range-thumb {
-  border-color: var(--ring);
-  box-shadow: inset 0 0 0 1px var(--ring);
-}
-
-.form-range:disabled {
-  cursor: not-allowed;
-  opacity: 0.4;
-}
-
-.btn:not(.btn-primary, .viz-tile):is(
-    [aria-pressed=&quot;true&quot;],
-    [aria-selected=&quot;true&quot;],
-    .is-selected
-  ) {
-  border-color: var(--primary);
-  color: var(--primary-foreground);
-  background: var(--primary);
-}
-
-.btn.viz-tile:is([aria-pressed=&quot;true&quot;], [aria-selected=&quot;true&quot;], .is-selected) {
-  border-color: var(--primary);
-  box-shadow: inset 0 0 0 1px var(--primary);
-}
-
-.btn:focus-visible {
-  outline: 2px solid var(--ring);
-  outline-offset: 2px;
-}
-
-svg {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
-
-#widget &gt; svg {
-  width: 100%;
-}
-
-/* Model-authored chart rules can otherwise stretch icons after these styles load. */
-svg.lucide {
-  display: block;
-  width: 16px !important;
-  height: 16px !important;
-  flex: none;
-  margin: 0 !important;
-  stroke-width: 1.6;
-}
-
-.text-warning,
-.text-destructive {
-  color: var(--destructive);
-}
-
-html&gt;body{padding:0}&lt;/style&gt;
-&lt;/head&gt;
-&lt;body&gt;
-&lt;div id=&quot;k8s-ai-kind-map-20260819&quot;&gt;
-  &lt;style&gt;
-    #k8s-ai-kind-map-20260819 {
-      color: var(--foreground);
-      display: grid;
-      gap: 16px;
-      width: 100%;
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="常用工具与可视化入口">
+  <title>Home · Classic Site</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #10243e;
+      --muted: #607087;
+      --paper: #f4f1e9;
+      --card: rgba(255, 255, 255, 0.76);
+      --line: rgba(16, 36, 62, 0.13);
+      --blue: #326ce5;
+      --blue-dark: #2055bb;
+      --blue-soft: #e8efff;
+      --shadow: 0 24px 70px rgba(25, 51, 83, 0.13);
     }
 
-    #k8s-ai-kind-map-20260819 .map-heading {
-      display: flex;
-      align-items: end;
-      justify-content: space-between;
-      gap: 12px;
-      flex-wrap: wrap;
+    * {
+      box-sizing: border-box;
     }
 
-    #k8s-ai-kind-map-20260819 .map-heading h2,
-    #k8s-ai-kind-map-20260819 .map-heading p,
-    #k8s-ai-kind-map-20260819 .group h3,
-    #k8s-ai-kind-map-20260819 .group p,
-    #k8s-ai-kind-map-20260819 .band-title p {
+    html {
+      min-height: 100%;
+      background: var(--paper);
+    }
+
+    body {
+      min-height: 100vh;
       margin: 0;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 82% 12%, rgba(50, 108, 229, 0.13), transparent 28rem),
+        linear-gradient(rgba(16, 36, 62, 0.045) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(16, 36, 62, 0.045) 1px, transparent 1px),
+        var(--paper);
+      background-size: auto, 48px 48px, 48px 48px, auto;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      -webkit-font-smoothing: antialiased;
     }
 
-    #k8s-ai-kind-map-20260819 .selection {
-      display: grid;
-      grid-template-columns: minmax(150px, 1.1fr) minmax(170px, 1.2fr) minmax(190px, 1.5fr);
-      gap: 12px;
-      align-items: center;
+    .page {
+      width: min(1180px, calc(100% - 48px));
+      min-height: 100vh;
+      margin: 0 auto;
+      padding: 28px 0 64px;
     }
 
-    #k8s-ai-kind-map-20260819 .selection-main {
+    header {
       display: flex;
       align-items: center;
-      gap: 9px;
-      min-width: 0;
-    }
-
-    #k8s-ai-kind-map-20260819 .selection-dot,
-    #k8s-ai-kind-map-20260819 .legend-dot {
-      display: inline-block;
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      flex: 0 0 auto;
-      background: var(--viz-series-2);
-    }
-
-    #k8s-ai-kind-map-20260819 .selection-name {
-      overflow-wrap: anywhere;
-    }
-
-    #k8s-ai-kind-map-20260819 .selection-label {
-      color: var(--muted-foreground);
-      display: block;
-    }
-
-    #k8s-ai-kind-map-20260819 .selection-value {
-      overflow-wrap: anywhere;
-    }
-
-    #k8s-ai-kind-map-20260819 .orientation {
-      display: grid;
-      grid-template-columns: 1fr auto 1fr;
-      gap: 8px;
-      align-items: center;
-      color: var(--muted-foreground);
-    }
-
-    #k8s-ai-kind-map-20260819 .orientation-line {
-      height: 1px;
-      background: var(--border);
-      position: relative;
-    }
-
-    #k8s-ai-kind-map-20260819 .orientation-line::after {
-      content: &quot;&quot;;
-      position: absolute;
-      right: 0;
-      top: -3px;
-      width: 6px;
-      height: 6px;
-      border-top: 1px solid var(--border);
-      border-right: 1px solid var(--border);
-      transform: rotate(45deg);
-    }
-
-    #k8s-ai-kind-map-20260819 .orientation-start {
-      text-align: left;
-    }
-
-    #k8s-ai-kind-map-20260819 .orientation-end {
-      text-align: right;
-    }
-
-    #k8s-ai-kind-map-20260819 .band {
-      display: grid;
-      gap: 13px;
-      padding-top: 14px;
-      border-top: 1px solid var(--border);
-    }
-
-    #k8s-ai-kind-map-20260819 .band-title {
-      display: flex;
-      align-items: baseline;
       justify-content: space-between;
-      gap: 12px;
-      flex-wrap: wrap;
+      padding-bottom: 28px;
+      border-bottom: 1px solid var(--line);
     }
 
-    #k8s-ai-kind-map-20260819 .upper-main {
-      display: grid;
-      grid-template-columns: minmax(0, 1.7fr) minmax(0, 1fr);
-      gap: 18px;
-      align-items: start;
-    }
-
-    #k8s-ai-kind-map-20260819 .upper-support {
-      display: grid;
-      grid-template-columns: minmax(0, 1.7fr) minmax(0, 1fr);
-      gap: 18px;
-      align-items: start;
-    }
-
-    #k8s-ai-kind-map-20260819 .lower-main {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 18px;
-      align-items: start;
-    }
-
-    #k8s-ai-kind-map-20260819 .group {
-      display: grid;
-      gap: 8px;
-      min-width: 0;
-    }
-
-    #k8s-ai-kind-map-20260819 .group-heading {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      min-width: 0;
-    }
-
-    #k8s-ai-kind-map-20260819 .group-heading .legend-dot {
-      background: var(--group-color);
-    }
-
-    #k8s-ai-kind-map-20260819 .tile-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(112px, 1fr));
-      gap: 7px;
-    }
-
-    #k8s-ai-kind-map-20260819 .kind-tile {
-      overflow-wrap: anywhere;
-      background: color-mix(in srgb, var(--tile-color) 13%, transparent);
-    }
-
-    #k8s-ai-kind-map-20260819 .cat-k8s {
-      --tile-color: var(--viz-series-1);
-    }
-
-    #k8s-ai-kind-map-20260819 .cat-gie {
-      --tile-color: var(--viz-series-2);
-    }
-
-    #k8s-ai-kind-map-20260819 .cat-experimental {
-      --tile-color: var(--viz-series-3);
-    }
-
-    #k8s-ai-kind-map-20260819 .cat-eg {
-      --tile-color: var(--viz-series-4);
-    }
-
-    #k8s-ai-kind-map-20260819 .cat-aig {
-      --tile-color: var(--viz-series-5);
-    }
-
-    #k8s-ai-kind-map-20260819 .cat-llmd {
-      --tile-color: var(--viz-series-6);
-    }
-
-    #k8s-ai-kind-map-20260819 .cat-runtime {
-      --tile-color: var(--muted-foreground);
-    }
-
-    #k8s-ai-kind-map-20260819 .runtime-grid {
-      grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
-    }
-
-    #k8s-ai-kind-map-20260819 .legend {
-      display: flex;
-      gap: 8px 16px;
-      flex-wrap: wrap;
-      align-items: center;
-      padding-top: 2px;
-    }
-
-    #k8s-ai-kind-map-20260819 .legend-item {
+    .brand {
       display: inline-flex;
       align-items: center;
-      gap: 6px;
+      gap: 11px;
+      color: var(--ink);
+      font-size: 14px;
+      font-weight: 750;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
     }
 
-    #k8s-ai-kind-map-20260819 .legend-item[data-cat=&quot;k8s&quot;] .legend-dot {
-      background: var(--viz-series-1);
+    .brand-mark {
+      display: grid;
+      width: 34px;
+      height: 34px;
+      place-items: center;
+      border-radius: 10px;
+      color: white;
+      background: var(--ink);
+      box-shadow: 0 8px 20px rgba(16, 36, 62, 0.2);
     }
 
-    #k8s-ai-kind-map-20260819 .legend-item[data-cat=&quot;gie&quot;] .legend-dot {
-      background: var(--viz-series-2);
+    .brand-mark svg {
+      width: 18px;
+      height: 18px;
     }
 
-    #k8s-ai-kind-map-20260819 .legend-item[data-cat=&quot;experimental&quot;] .legend-dot {
-      background: var(--viz-series-3);
+    .home-label {
+      padding: 7px 10px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      color: var(--muted);
+      background: rgba(255, 255, 255, 0.45);
+      font-size: 11px;
+      font-weight: 750;
+      letter-spacing: 0.14em;
     }
 
-    #k8s-ai-kind-map-20260819 .legend-item[data-cat=&quot;eg&quot;] .legend-dot {
-      background: var(--viz-series-4);
+    main {
+      padding-top: clamp(72px, 12vh, 132px);
     }
 
-    #k8s-ai-kind-map-20260819 .legend-item[data-cat=&quot;aig&quot;] .legend-dot {
-      background: var(--viz-series-5);
+    .eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 0 0 18px;
+      color: var(--blue-dark);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
     }
 
-    #k8s-ai-kind-map-20260819 .legend-item[data-cat=&quot;llmd&quot;] .legend-dot {
-      background: var(--viz-series-6);
+    .eyebrow::before {
+      width: 28px;
+      height: 2px;
+      content: "";
+      background: var(--blue);
     }
 
-    #k8s-ai-kind-map-20260819 .legend-item[data-cat=&quot;runtime&quot;] .legend-dot {
-      background: var(--muted-foreground);
+    h1 {
+      max-width: 760px;
+      margin: 0;
+      font-size: clamp(44px, 7vw, 82px);
+      font-weight: 780;
+      letter-spacing: -0.055em;
+      line-height: 0.98;
     }
 
-    @media (max-width: 640px) {
-      #k8s-ai-kind-map-20260819 .selection,
-      #k8s-ai-kind-map-20260819 .upper-main,
-      #k8s-ai-kind-map-20260819 .upper-support,
-      #k8s-ai-kind-map-20260819 .lower-main {
+    .intro {
+      max-width: 590px;
+      margin: 26px 0 0;
+      color: var(--muted);
+      font-size: clamp(16px, 2vw, 19px);
+      line-height: 1.7;
+    }
+
+    .section-heading {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: clamp(64px, 10vh, 104px) 0 18px;
+    }
+
+    .section-heading h2 {
+      margin: 0;
+      font-size: 14px;
+      font-weight: 780;
+      letter-spacing: 0.06em;
+    }
+
+    .section-heading span {
+      color: var(--muted);
+      font-family: ui-monospace, "SFMono-Regular", Consolas, monospace;
+      font-size: 12px;
+    }
+
+    .shortcut {
+      position: relative;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 220px;
+      min-height: 276px;
+      overflow: hidden;
+      border: 1px solid rgba(50, 108, 229, 0.22);
+      border-radius: 26px;
+      color: inherit;
+      background: var(--card);
+      box-shadow: var(--shadow);
+      text-decoration: none;
+      isolation: isolate;
+      transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+      backdrop-filter: blur(18px);
+    }
+
+    .shortcut::after {
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      content: "";
+      background: linear-gradient(115deg, transparent 52%, rgba(50, 108, 229, 0.09));
+    }
+
+    .shortcut:hover {
+      border-color: rgba(50, 108, 229, 0.48);
+      box-shadow: 0 30px 80px rgba(25, 51, 83, 0.18);
+      transform: translateY(-4px);
+    }
+
+    .shortcut:focus-visible {
+      outline: 3px solid rgba(50, 108, 229, 0.38);
+      outline-offset: 4px;
+    }
+
+    .shortcut-content {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: space-between;
+      padding: clamp(30px, 5vw, 48px);
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 11px;
+      border-radius: 999px;
+      color: var(--blue-dark);
+      background: var(--blue-soft);
+      font-size: 12px;
+      font-weight: 750;
+    }
+
+    .tag::before {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      content: "";
+      background: var(--blue);
+      box-shadow: 0 0 0 4px rgba(50, 108, 229, 0.12);
+    }
+
+    .shortcut h3 {
+      margin: 24px 0 10px;
+      font-size: clamp(25px, 4vw, 40px);
+      letter-spacing: -0.035em;
+      line-height: 1.13;
+    }
+
+    .shortcut p {
+      max-width: 620px;
+      margin: 0;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.65;
+    }
+
+    .open-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 28px;
+      color: var(--blue-dark);
+      font-size: 14px;
+      font-weight: 780;
+    }
+
+    .open-link svg {
+      width: 17px;
+      transition: transform 180ms ease;
+    }
+
+    .shortcut:hover .open-link svg {
+      transform: translateX(4px);
+    }
+
+    .visual {
+      position: relative;
+      min-height: 100%;
+      overflow: hidden;
+      border-left: 1px solid rgba(50, 108, 229, 0.16);
+      background: var(--ink);
+    }
+
+    .visual::before,
+    .visual::after {
+      position: absolute;
+      width: 180px;
+      height: 180px;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 50%;
+      content: "";
+    }
+
+    .visual::before {
+      top: -80px;
+      right: -70px;
+    }
+
+    .visual::after {
+      bottom: -105px;
+      left: -80px;
+    }
+
+    .network {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    footer {
+      display: flex;
+      justify-content: space-between;
+      gap: 24px;
+      margin-top: 32px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    @media (max-width: 720px) {
+      .page {
+        width: min(100% - 32px, 1180px);
+        padding-top: 18px;
+      }
+
+      header {
+        padding-bottom: 18px;
+      }
+
+      main {
+        padding-top: 64px;
+      }
+
+      h1 {
+        font-size: clamp(42px, 14vw, 64px);
+      }
+
+      .shortcut {
         grid-template-columns: 1fr;
       }
 
-      #k8s-ai-kind-map-20260819 .orientation {
-        grid-template-columns: 1fr;
+      .visual {
+        min-height: 150px;
+        border-top: 1px solid rgba(50, 108, 229, 0.16);
+        border-left: 0;
       }
 
-      #k8s-ai-kind-map-20260819 .orientation-line {
-        display: none;
-      }
-
-      #k8s-ai-kind-map-20260819 .orientation-end {
-        text-align: left;
+      footer {
+        flex-direction: column;
+        gap: 6px;
       }
     }
-  &lt;/style&gt;
 
-  &lt;header class=&quot;map-heading&quot;&gt;
-    &lt;div&gt;
-      &lt;h2&gt;Kubernetes AI Gateway Kind 归属地图&lt;/h2&gt;
-      &lt;p class=&quot;text-small text-muted&quot;&gt;口径：2026-08 上游 API；覆盖 Gateway API、Envoy Gateway、Envoy AI Gateway、GIE 与 llm-d。点击任意名称查看归属。&lt;/p&gt;
-    &lt;/div&gt;
-    &lt;span class=&quot;viz-badge&quot;&gt;不含 *List 与可选模型 Operator&lt;/span&gt;
-  &lt;/header&gt;
-
-  &lt;section class=&quot;card selection&quot; aria-live=&quot;polite&quot; aria-label=&quot;当前选择详情&quot;&gt;
-    &lt;div class=&quot;selection-main&quot;&gt;
-      &lt;span class=&quot;selection-dot&quot; id=&quot;kind-map-selection-dot&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;
-      &lt;div&gt;
-        &lt;span class=&quot;selection-label text-small&quot;&gt;当前对象&lt;/span&gt;
-        &lt;strong class=&quot;selection-name&quot; id=&quot;kind-map-name&quot;&gt;InferencePool&lt;/strong&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div&gt;
-      &lt;span class=&quot;selection-label text-small&quot;&gt;引入者 · API&lt;/span&gt;
-      &lt;span class=&quot;selection-value&quot; id=&quot;kind-map-owner&quot;&gt;Kubernetes SIG Network / WG Serving · inference.networking.k8s.io/v1&lt;/span&gt;
-      &lt;span class=&quot;selection-label text-small&quot;&gt;&lt;a id=&quot;kind-map-source&quot; href=&quot;https://gateway-api-inference-extension.sigs.k8s.io/reference/spec/&quot; target=&quot;_blank&quot; rel=&quot;noreferrer&quot;&gt;官方依据&lt;/a&gt;&lt;/span&gt;
-    &lt;/div&gt;
-    &lt;div&gt;
-      &lt;span class=&quot;selection-label text-small&quot;&gt;是不是 Kubernetes 标准&lt;/span&gt;
-      &lt;span class=&quot;selection-value&quot; id=&quot;kind-map-status&quot;&gt;官方稳定扩展；不是 Gateway API Standard&lt;/span&gt;
-      &lt;span class=&quot;selection-label text-small&quot; id=&quot;kind-map-role&quot;&gt;推理后端池：选中模型服务器 Pod，并引用 EPP&lt;/span&gt;
-    &lt;/div&gt;
-  &lt;/section&gt;
-
-  &lt;div class=&quot;orientation text-small&quot; aria-hidden=&quot;true&quot;&gt;
-    &lt;span class=&quot;orientation-start&quot;&gt;← Gateway、入口、路由与策略&lt;/span&gt;
-    &lt;span class=&quot;orientation-line&quot;&gt;&lt;/span&gt;
-    &lt;span class=&quot;orientation-end&quot;&gt;模型、EPP、推理与调度 →&lt;/span&gt;
-  &lt;/div&gt;
-
-  &lt;section class=&quot;band&quot; aria-labelledby=&quot;standard-layer-title&quot;&gt;
-    &lt;div class=&quot;band-title&quot;&gt;
-      &lt;h2 id=&quot;standard-layer-title&quot;&gt;上层 · Kubernetes 标准与 SIG 官方 API&lt;/h2&gt;
-      &lt;p class=&quot;text-small text-muted&quot;&gt;“官方扩展”与“Gateway API Standard”不是同一等级&lt;/p&gt;
-    &lt;/div&gt;
-
-    &lt;div class=&quot;upper-main&quot;&gt;
-      &lt;section class=&quot;group&quot; style=&quot;--group-color: var(--viz-series-1)&quot;&gt;
-        &lt;div class=&quot;group-heading&quot;&gt;
-          &lt;span class=&quot;legend-dot&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;
-          &lt;div&gt;
-            &lt;h3&gt;Gateway API Standard&lt;/h3&gt;
-            &lt;p class=&quot;text-small text-muted&quot;&gt;Kubernetes SIG Network · gateway.networking.k8s.io/v1&lt;/p&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-        &lt;div class=&quot;tile-grid&quot; aria-label=&quot;Gateway API Standard Kinds&quot;&gt;
-          &lt;button type=&quot;button&quot; class=&quot;btn viz-tile kind-tile cat-k8s&quot; data-key=&quot;gatewayclass&quot; aria-label=&quot;GatewayClass，Kubernetes Gateway API Standard&quot;&gt;GatewayClass&lt;/button&gt;
-          &lt;button type=&quot;button&quot; class=&quot;btn viz-tile kind-tile cat-k8s&quot; data-key=&quot;gateway&quot; aria-label=&quot;Gateway，Kubernetes Gateway API Standard&quot;&gt;Gateway&lt;/button&gt;
-          &lt;button type=&quot;button&quot; class=&quot;btn viz-tile kind-tile cat-k8s&quot; data-key=&quot;listenerset&quot; aria-label=&quot;ListenerSet，Kubernetes Gateway API Standard&quot;&gt;ListenerSet&lt;/button&gt;
-          &lt;button type=&quot;button&quot; class=&quot;btn viz-tile kind-tile cat-k8s&quot; data-key=&quot;httproute&quot; aria-label=&quot;HTTPRoute，Kubernetes Gateway API Standard&quot;&gt;HTTPRoute&lt;/button&gt;
-          &lt;button type=&quot;button&quot; class=&quot;btn viz-tile kind-tile cat-k8s&quot; data-key=&quot;grpcroute&quot; aria-label=&quot;GRPCRoute，Kubernetes Gateway API Standard&quot;&gt;GRPCRoute&lt;/button&gt;
-          &lt;button type=&quot;button&quot; class=&quot;btn viz-tile kind-tile cat-k8s&quot; data-key=&quot;tlsroute&quot; aria-label=&quot;TLSRoute，Kubernetes Gateway API Standard&quot;&gt;TLSRoute&lt;/button&gt;
-          &lt;button type=&quot;button&quot; class=&quot;btn viz-tile kind-tile cat-k8s&quot; data-key=&quot;tcproute&quot; aria-label=&quot;TCPRoute，Kubernetes Gateway API Standard&quot;&gt;TCPRoute&lt;/button&gt;
-          &lt;button type=&quot;button&quot; class=&quot;btn viz-tile kind-tile cat-k8s&quot; data-key=&quot;udproute&quot; aria-label=&quot;UDPRoute，Kubernetes Gateway API Standard&quot;&gt;UDPRoute&lt;/button&gt;
-          &lt;button type=&quot;button&quot; class=&quot;btn viz-tile kind-tile cat-k8s&quot; data-key=&quot;referencegrant&quot; aria-label=&quot;ReferenceGrant，Kubernetes Gateway API Standard&quot;&gt;ReferenceGrant&lt;/button&gt;
-          &lt;button type=&quot;button&quot; class=&quot;btn viz-tile kind-tile cat-k8s&quot; data-key=&quot;backendtlspolicy&quot; aria-label=&quot;BackendTLSPolicy，Kubernetes Gateway API Standard&quot;&gt;BackendTLSPolicy&lt;/button&gt;
-        &lt;/div&gt;
-      &lt;/section&gt;
-
-      &lt;section class=&quot;group&quot; style=&quot;--group-color: var(--viz-series-2)&quot;&gt;
-        &lt;div class=&quot;group-heading&quot;&gt;
-          &lt;span class=&quot;legend-dot&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;
-          &lt;div&gt;
-            &lt;h3&gt;Gateway API Inference Extension&lt;/h3&gt;
-            &lt;p class=&quot;text-small text-muted&quot;&gt;Kubernetes SIG 官方扩展 · 不属于 Gateway API core&lt;/p&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-        &lt;div class=&quot;tile-grid&quot; aria-label=&quot;Gateway API Inference Extension Kinds&quot;&gt;
-          &lt;button type=&quot;button&quot; class=&quot;btn viz-tile kind-tile cat-gie&quot; data-key=&quot;inferencepool&quot; aria-pressed=&quot;true&quot; aria-label=&quot;InferencePool，Kubernetes SIG 官方稳定扩展，不是 Gateway API Standard&quot;&gt;InferencePool&lt;/button&gt;
-          &lt;button type=&quot;button&quot; class=&quot;btn viz-tile kind-tile cat-experimental&quot; data-key=&quot;inferencepoolimport&quot; aria-label=&quot;InferencePoolImport，Kubernetes SIG 官方实验扩展&quot;&gt;InferencePoolImport&lt;/button&gt;
-        &lt;/div&gt;
-      &lt;/section&gt;
-    &lt;/div&gt;
-
-    &lt;div class=&quot;upper-support&quot;&gt;
-      &lt;section class=&quot;group&quot; style=&quot;--group-color: var(--viz-series-1)&quot;&gt;
-        &lt;div class=&quot;group-heading&quot;&gt;
-          &lt;span class=&quot;legend-dot&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;
-          &lt;div&gt;
-            &lt;h3&gt;Kubernetes 内置承载与网络对象&lt;/h3&gt;
-            &lt;p class=&quot;text-small text-muted&quot;&gt;EPP、vLLM、Envoy 等最终通常落到这些 Kind&lt;/p&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-        &lt;div class=&quot;tile-grid&quot; aria-label=&quot;Kubernetes built-in Kinds&quot;&gt;
-          &lt;button type=&quot;button&quot; class=&quot;btn viz-tile kind-tile cat-k8s&quot; data-key=&quot;namespace&quot;&gt;Namespace&lt;/button&gt;
-          &lt;button type=&quot;button&quot; class=&quot;btn viz-tile kind-tile cat-k8s&quot; data-key=&quot;service&quot;&gt;Service&lt;/button&gt;
-          &lt;button type=&quot;button&quot; class=&quot;btn viz-tile kind-tile cat-k8s&quot; data-key=&quot;endpointslice&quot;&gt;EndpointSlice&lt;/button&gt;
-          &lt;button type=&quot;button&quot; class=&quot;btn viz-tile kind-tile cat-k8s&quot; data-key=&quot;ingressclass&quot;&gt;IngressClass&lt;/button&gt;
-          &lt;button type=&quot;button&quot; class=&quot;btn viz-tile kind-tile cat-k8s&quot; data-key=&quot;ingress&quot;&gt;Ingress&lt;/button&gt;
-          &lt;button type=&quot;button&quot; class=&quot;btn viz-tile kind-tile cat-k8s&quot; data-key=&quot;secret&quot;&gt;Secret&lt;/button&gt;
-          &lt;button type=&quot;button&quot; class=&quot;btn viz-tile kind-tile cat-k8s&quot; data-key=&quot;configmap&quot;&gt;ConfigMap&lt;/button&gt;
-          &lt;button type=&quot;button&quot; class=&quot;btn viz-tile kind-tile cat-k8s&quot; data-key=&quot;deployment&quot;&gt;Deployment&lt;/button&gt;
-          &lt;button type=&quot;button&quot; class=&quot;btn viz-tile kind-tile cat-k8s&quot; data-key=&quot;statefulset&quot;&gt;StatefulSet&lt;/button&gt;
-          &lt;button type=&quot;button&quot; class=&quot;btn viz-tile kind-tile cat-k8s&quot; data-key=&quot;daemonset&quot;&gt;DaemonSet&lt;/button&gt;
-          &lt;button type=&quot;button&quot; class=&quot;btn viz-tile kind-tile cat-k8s&quot; data-key=&quot;pod&quot;&gt;Pod&lt;/button&gt;
-          &lt;button type=&quot;button&quot; class=&quot;btn viz-tile kind-tile cat-k8s&quot; data-key=&quot;serviceaccount&quot;&gt;ServiceAccount&lt;/button&gt;
-          &lt;button type=&quot;button&quot; class=&quot;btn viz-tile kind-tile cat-k8s&quot; data-key=&quot;role&quot;&gt;Role&lt;/button&gt;
-          &lt;button type=&quot;button&quot; class=&quot;btn viz-tile kind-tile cat-k8s&quot; data-key=&quot;rolebinding&quot;&gt;RoleBinding&lt;/button&gt;
-          &lt;button type=&quot;button&quot; class=&quot;btn viz-tile kind-tile cat-k8s&quot; data-key=&quot;clusterrole&quot;&gt;ClusterRole&lt;/button&gt;
-          &lt;button type=&quot;button&quot; class=&quot;btn viz-tile kind-tile cat-k8s&quot; data-key=&quot;clusterrolebinding&quot;&gt;ClusterRoleBinding&lt;/button&gt;
-          &lt;button type=&quot;button&quot; class=&quot;btn viz-tile kind-tile cat-k8s&quot; data-key=&quot;hpa&quot;&gt;HorizontalPodAutoscaler&lt;/button&gt;
-          &lt;button type=&quot;button&quot; class=&quot;btn viz-tile kind-tile cat-k8s&quot; data-key=&quot;pvc&quot;&gt;PersistentVolumeClaim&lt;/button&gt;
-          &lt;button type=&quot;button&quot; class=&quot;btn viz-tile kind-tile cat-k8s&quot; data-key=&quot;pdb&quot;&gt;PodDisruptionBudget&lt;/button&gt;
-          &lt;button type=&quot;button&quot; class=&quot;btn viz-tile kind-tile cat-k8s&quot; data-key=&quot;networkpolicy&quot;&gt;NetworkPolicy&lt;/button&gt;
-        &lt;/div&gt;
-      &lt;/section&gt;
-
-      &lt;section class=&quot;group&quot; style=&quot;--group-color: var(--viz-series-3)&quot;&gt;
-        &lt;div class=&quot;group-heading&quot;&gt;
-          &lt;span class=&quot;legend-dot&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;
-          &lt;div&gt;
-            &lt;h3&gt;Gateway API 官方实验候选&lt;/h3&gt;
-            &lt;p class=&quot;text-small text-muted&quot;&gt;Kubernetes SIG 引入，但不属于 Standard Channel&lt;/p&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-        &lt;div class=&quot;tile-grid&quot; aria-label=&quot;Gateway API experimental Kinds&quot;&gt;
-          &lt;button type=&quot;button&quot; class=&quot;btn viz-tile kind-tile cat-experimental&quot; data-key=&quot;xbackend&quot;&gt;XBackend&lt;/button&gt;
-          &lt;button type=&quot;button&quot; class=&quot;btn viz-tile kind-tile cat-experimental&quot; data-key=&quot;xbackendtrafficpolicy&quot;&gt;XBackendTrafficPolicy&lt;/button&gt;
-          &lt;button type=&quot;button&quot; class=&quot;btn viz-tile kind-tile cat-experimental&quot; data-key=&quot;xmesh&quot;&gt;XMesh&lt;/button&gt;
-        &lt;/div&gt;
-      &lt;/section&gt;
-    &lt;/div&gt;
-  &lt;/section&gt;
-
-  &lt;section class=&quot;band&quot; aria-labelledby=&quot;implementation-layer-title&quot;&gt;
-    &lt;div class=&quot;band-title&quot;&gt;
-      &lt;h2 id=&quot;implementation-layer-title&quot;&gt;下层 · 项目实现、产品扩展与运行组件&lt;/h2&gt;
-      &lt;p class=&quot;text-small text-muted&quot;&gt;这些名字出现在 YAML，不等于它们是 Kubernetes 标准&lt;/p&gt;
-    &lt;/div&gt;
-
-    &lt;div class=&quot;lower-main&quot;&gt;
-      &lt;section class=&quot;group&quot; style=&quot;--group-color: var(--viz-series-4)&quot;&gt;
-        &lt;div class=&quot;group-heading&quot;&gt;
-          &lt;span class=&quot;legend-dot&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;
-          &lt;div&gt;
-            &lt;h3&gt;Envoy Gateway&lt;/h3&gt;
-            &lt;p class=&quot;text-small text-muted&quot;&gt;gateway.envoyproxy.io/v1alpha1&lt;/p&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-        &lt;div class=&quot;tile-grid&quot; aria-label=&quot;Envoy Gateway Kinds&quot;&gt;
-          &lt;button type=&quot;button&quot; class=&quot;btn viz-tile kind-tile cat-eg&quot; data-key=&quot;eg-backend&quot;&gt;Backend&lt;/button&gt;
-          &lt;button type=&quot;button&quot; class=&quot;btn viz-tile kind-tile cat-eg&quot; data-key=&quot;eg-backendtrafficpolicy&quot;&gt;BackendTrafficPolicy&lt;/button&gt;
-          &lt;button type=&quot;button&quot; class=&quot;btn viz-tile kind-tile cat-eg&quot; data-key=&quot;eg-clienttrafficpolicy&quot;&gt;ClientTrafficPolicy&lt;/button&gt;
-          &lt;button type=&quot;button&quot; class=&quot;btn viz-tile kind-tile cat-eg&quot; data-key=&quot;eg-extensionpolicy&quot;&gt;EnvoyExtensionPolicy&lt;/button&gt;
-          &lt;button type=&quot;button&quot; class=&quot;btn viz-tile kind-tile cat-eg&quot; data-key=&quot;eg-patchpolicy&quot;&gt;EnvoyPatchPolicy&lt;/button&gt;
-          &lt;button type=&quot;button&quot; class=&quot;btn viz-tile kind-tile cat-eg&quot; data-key=&quot;eg-envoyproxy&quot;&gt;EnvoyProxy&lt;/button&gt;
-          &lt;button type=&quot;button&quot; class=&quot;btn viz-tile kind-tile cat-eg&quot; data-key=&quot;eg-httproutefilter&quot;&gt;HTTPRouteFilter&lt;/button&gt;
-          &lt;button type=&quot;button&quot; class=&quot;btn viz-tile kind-tile cat-eg&quot; data-key=&quot;eg-securitypolicy&quot;&gt;SecurityPolicy&lt;/button&gt;
-          &lt;button type=&quot;button&quot; class=&quot;btn viz-tile kind-tile cat-runtime&quot; data-key=&quot;eg-envoygateway&quot;&gt;EnvoyGateway&lt;/button&gt;
-        &lt;/div&gt;
-      &lt;/section&gt;
-
-      &lt;section class=&quot;group&quot; style=&quot;--group-color: var(--viz-series-5)&quot;&gt;
-        &lt;div class=&quot;group-heading&quot;&gt;
-          &lt;span class=&quot;legend-dot&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;
-          &lt;div&gt;
-            &lt;h3&gt;Envoy AI Gateway&lt;/h3&gt;
-            &lt;p class=&quot;text-small text-muted&quot;&gt;aigateway.envoyproxy.io/v1beta1&lt;/p&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-        &lt;div class=&quot;tile-grid&quot; aria-label=&quot;Envoy AI Gateway Kinds&quot;&gt;
-          &lt;button type=&quot;button&quot; class=&quot;btn viz-tile kind-tile cat-aig&quot; data-key=&quot;aig-route&quot;&gt;AIGatewayRoute&lt;/button&gt;
-          &lt;button type=&quot;button&quot; class=&quot;btn viz-tile kind-tile cat-aig&quot; data-key=&quot;aig-backend&quot;&gt;AIServiceBackend&lt;/button&gt;
-          &lt;button type=&quot;button&quot; class=&quot;btn viz-tile kind-tile cat-aig&quot; data-key=&quot;aig-security&quot;&gt;BackendSecurityPolicy&lt;/button&gt;
-          &lt;button type=&quot;button&quot; class=&quot;btn viz-tile kind-tile cat-aig&quot; data-key=&quot;aig-config&quot;&gt;GatewayConfig&lt;/button&gt;
-          &lt;button type=&quot;button&quot; class=&quot;btn viz-tile kind-tile cat-aig&quot; data-key=&quot;aig-mcproute&quot;&gt;MCPRoute&lt;/button&gt;
-          &lt;button type=&quot;button&quot; class=&quot;btn viz-tile kind-tile cat-aig&quot; data-key=&quot;aig-quota&quot;&gt;QuotaPolicy&lt;/button&gt;
-        &lt;/div&gt;
-      &lt;/section&gt;
-
-      &lt;section class=&quot;group&quot; style=&quot;--group-color: var(--viz-series-6)&quot;&gt;
-        &lt;div class=&quot;group-heading&quot;&gt;
-          &lt;span class=&quot;legend-dot&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;
-          &lt;div&gt;
-            &lt;h3&gt;llm-d Router / EPP API&lt;/h3&gt;
-            &lt;p class=&quot;text-small text-muted&quot;&gt;llm-d.ai/v1alpha2 · 非 Kubernetes 标准&lt;/p&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-        &lt;div class=&quot;tile-grid&quot; aria-label=&quot;llm-d Kinds and configuration schemas&quot;&gt;
-          &lt;button type=&quot;button&quot; class=&quot;btn viz-tile kind-tile cat-llmd&quot; data-key=&quot;llmd-objective&quot;&gt;InferenceObjective&lt;/button&gt;
-          &lt;button type=&quot;button&quot; class=&quot;btn viz-tile kind-tile cat-llmd&quot; data-key=&quot;llmd-rewrite&quot;&gt;InferenceModelRewrite&lt;/button&gt;
-          &lt;button type=&quot;button&quot; class=&quot;btn viz-tile kind-tile cat-runtime&quot; data-key=&quot;llmd-pickerconfig&quot;&gt;EndpointPickerConfig&lt;/button&gt;
-        &lt;/div&gt;
-      &lt;/section&gt;
-    &lt;/div&gt;
-
-    &lt;section class=&quot;group&quot; style=&quot;--group-color: var(--muted-foreground)&quot;&gt;
-      &lt;div class=&quot;group-heading&quot;&gt;
-        &lt;span class=&quot;legend-dot&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;
-        &lt;div&gt;
-          &lt;h3&gt;运行组件 · 不是 Kind&lt;/h3&gt;
-          &lt;p class=&quot;text-small text-muted&quot;&gt;它们通常由 Deployment / Service / Pod 承载&lt;/p&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-      &lt;div class=&quot;tile-grid runtime-grid&quot; aria-label=&quot;Runtime components that are not Kubernetes Kinds&quot;&gt;
-        &lt;button type=&quot;button&quot; class=&quot;btn viz-tile kind-tile cat-runtime&quot; data-key=&quot;runtime-eg-controller&quot;&gt;Envoy Gateway Controller&lt;/button&gt;
-        &lt;button type=&quot;button&quot; class=&quot;btn viz-tile kind-tile cat-runtime&quot; data-key=&quot;runtime-envoy&quot;&gt;Envoy Proxy&lt;/button&gt;
-        &lt;button type=&quot;button&quot; class=&quot;btn viz-tile kind-tile cat-runtime&quot; data-key=&quot;runtime-aig-controller&quot;&gt;AI Gateway Controller&lt;/button&gt;
-        &lt;button type=&quot;button&quot; class=&quot;btn viz-tile kind-tile cat-runtime&quot; data-key=&quot;runtime-extproc&quot;&gt;AI ext-proc&lt;/button&gt;
-        &lt;button type=&quot;button&quot; class=&quot;btn viz-tile kind-tile cat-runtime&quot; data-key=&quot;runtime-epp&quot;&gt;EPP / llm-d Router&lt;/button&gt;
-        &lt;button type=&quot;button&quot; class=&quot;btn viz-tile kind-tile cat-runtime&quot; data-key=&quot;runtime-bbr&quot;&gt;BBR&lt;/button&gt;
-        &lt;button type=&quot;button&quot; class=&quot;btn viz-tile kind-tile cat-runtime&quot; data-key=&quot;runtime-vllm&quot;&gt;vLLM&lt;/button&gt;
-        &lt;button type=&quot;button&quot; class=&quot;btn viz-tile kind-tile cat-runtime&quot; data-key=&quot;runtime-sglang&quot;&gt;SGLang&lt;/button&gt;
-      &lt;/div&gt;
-    &lt;/section&gt;
-  &lt;/section&gt;
-
-  &lt;footer class=&quot;legend text-small&quot; aria-label=&quot;颜色图例&quot;&gt;
-    &lt;span class=&quot;legend-item&quot; data-cat=&quot;k8s&quot;&gt;&lt;span class=&quot;legend-dot&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;Kubernetes 标准 / 内置&lt;/span&gt;
-    &lt;span class=&quot;legend-item&quot; data-cat=&quot;gie&quot;&gt;&lt;span class=&quot;legend-dot&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;Kubernetes SIG 官方稳定扩展&lt;/span&gt;
-    &lt;span class=&quot;legend-item&quot; data-cat=&quot;experimental&quot;&gt;&lt;span class=&quot;legend-dot&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;Kubernetes SIG 实验候选&lt;/span&gt;
-    &lt;span class=&quot;legend-item&quot; data-cat=&quot;eg&quot;&gt;&lt;span class=&quot;legend-dot&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;Envoy Gateway&lt;/span&gt;
-    &lt;span class=&quot;legend-item&quot; data-cat=&quot;aig&quot;&gt;&lt;span class=&quot;legend-dot&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;Envoy AI Gateway&lt;/span&gt;
-    &lt;span class=&quot;legend-item&quot; data-cat=&quot;llmd&quot;&gt;&lt;span class=&quot;legend-dot&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;llm-d&lt;/span&gt;
-    &lt;span class=&quot;legend-item&quot; data-cat=&quot;runtime&quot;&gt;&lt;span class=&quot;legend-dot&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;配置 schema / 运行组件，不是 K8s Kind&lt;/span&gt;
-  &lt;/footer&gt;
-
-  &lt;script&gt;
-    (() =&gt; {
-      const root = document.getElementById(&#x27;k8s-ai-kind-map-20260819&#x27;);
-      if (!root) return;
-
-      const sources = {
-        gateway: &#x27;https://gateway-api.sigs.k8s.io/reference/api-spec/main/spec/&#x27;,
-        gatewayx: &#x27;https://gateway-api.sigs.k8s.io/reference/api-spec/main/specx/&#x27;,
-        k8s: &#x27;https://kubernetes.io/docs/reference/kubernetes-api/&#x27;,
-        gie: &#x27;https://gateway-api-inference-extension.sigs.k8s.io/reference/spec/&#x27;,
-        giex: &#x27;https://gateway-api-inference-extension.sigs.k8s.io/reference/x-v1a1-spec/&#x27;,
-        eg: &#x27;https://gateway.envoyproxy.io/docs/api/extension_types/&#x27;,
-        aig: &#x27;https://aigateway.envoyproxy.io/docs/api/&#x27;,
-        llmd: &#x27;https://llm-d.ai/docs/api-reference&#x27;
-      };
-
-      const items = {
-        gatewayclass: [&#x27;GatewayClass&#x27;, &#x27;Kubernetes SIG Network&#x27;, &#x27;gateway.networking.k8s.io/v1&#x27;, &#x27;是 · Gateway API Standard&#x27;, &#x27;选择具体 Gateway 控制器实现&#x27;, &#x27;k8s&#x27;, sources.gateway],
-        gateway: [&#x27;Gateway&#x27;, &#x27;Kubernetes SIG Network&#x27;, &#x27;gateway.networking.k8s.io/v1&#x27;, &#x27;是 · Gateway API Standard&#x27;, &#x27;声明入口地址、Listener 与可挂接路由&#x27;, &#x27;k8s&#x27;, sources.gateway],
-        listenerset: [&#x27;ListenerSet&#x27;, &#x27;Kubernetes SIG Network&#x27;, &#x27;gateway.networking.k8s.io/v1&#x27;, &#x27;是 · Gateway API Standard&#x27;, &#x27;为 Gateway 分散管理额外 Listener&#x27;, &#x27;k8s&#x27;, sources.gateway],
-        httproute: [&#x27;HTTPRoute&#x27;, &#x27;Kubernetes SIG Network&#x27;, &#x27;gateway.networking.k8s.io/v1&#x27;, &#x27;是 · Gateway API Standard&#x27;, &#x27;HTTP/HTTPS 七层路由；可把 InferencePool 作为 backendRef&#x27;, &#x27;k8s&#x27;, sources.gateway],
-        grpcroute: [&#x27;GRPCRoute&#x27;, &#x27;Kubernetes SIG Network&#x27;, &#x27;gateway.networking.k8s.io/v1&#x27;, &#x27;是 · Gateway API Standard&#x27;, &#x27;gRPC 感知的七层路由&#x27;, &#x27;k8s&#x27;, sources.gateway],
-        tlsroute: [&#x27;TLSRoute&#x27;, &#x27;Kubernetes SIG Network&#x27;, &#x27;gateway.networking.k8s.io/v1&#x27;, &#x27;是 · Gateway API Standard&#x27;, &#x27;按 TLS/SNI 路由&#x27;, &#x27;k8s&#x27;, sources.gateway],
-        tcproute: [&#x27;TCPRoute&#x27;, &#x27;Kubernetes SIG Network&#x27;, &#x27;gateway.networking.k8s.io/v1&#x27;, &#x27;是 · Gateway API Standard（v1.6 起 GA）&#x27;, &#x27;四层 TCP 路由&#x27;, &#x27;k8s&#x27;, sources.gateway],
-        udproute: [&#x27;UDPRoute&#x27;, &#x27;Kubernetes SIG Network&#x27;, &#x27;gateway.networking.k8s.io/v1&#x27;, &#x27;是 · Gateway API Standard（v1.6 起 GA）&#x27;, &#x27;四层 UDP 路由&#x27;, &#x27;k8s&#x27;, sources.gateway],
-        referencegrant: [&#x27;ReferenceGrant&#x27;, &#x27;Kubernetes SIG Network&#x27;, &#x27;gateway.networking.k8s.io/v1&#x27;, &#x27;是 · Gateway API Standard&#x27;, &#x27;显式授权跨 Namespace 引用&#x27;, &#x27;k8s&#x27;, sources.gateway],
-        backendtlspolicy: [&#x27;BackendTLSPolicy&#x27;, &#x27;Kubernetes SIG Network&#x27;, &#x27;gateway.networking.k8s.io/v1&#x27;, &#x27;是 · Gateway API Standard&#x27;, &#x27;配置到后端的 TLS 验证&#x27;, &#x27;k8s&#x27;, sources.gateway],
-        inferencepool: [&#x27;InferencePool&#x27;, &#x27;Kubernetes SIG Network / WG Serving&#x27;, &#x27;inference.networking.k8s.io/v1&#x27;, &#x27;官方稳定扩展；不是 Gateway API Standard&#x27;, &#x27;推理后端池：选中模型服务器 Pod，并引用 EPP&#x27;, &#x27;gie&#x27;, sources.gie],
-        inferencepoolimport: [&#x27;InferencePoolImport&#x27;, &#x27;Kubernetes SIG Network / WG Serving&#x27;, &#x27;inference.networking.x-k8s.io/v1alpha1&#x27;, &#x27;否 · Kubernetes SIG 官方 Alpha 扩展&#x27;, &#x27;表示从其他集群导入的 InferencePool&#x27;, &#x27;experimental&#x27;, sources.giex],
-        namespace: [&#x27;Namespace&#x27;, &#x27;Kubernetes core&#x27;, &#x27;v1&#x27;, &#x27;是 · Kubernetes 内置 API&#x27;, &#x27;资源隔离与命名边界&#x27;, &#x27;k8s&#x27;, sources.k8s],
-        service: [&#x27;Service&#x27;, &#x27;Kubernetes core&#x27;, &#x27;v1&#x27;, &#x27;是 · Kubernetes 内置 API&#x27;, &#x27;为 Envoy、EPP 或模型 Pod 提供稳定服务入口&#x27;, &#x27;k8s&#x27;, sources.k8s],
-        endpointslice: [&#x27;EndpointSlice&#x27;, &#x27;Kubernetes SIG Network&#x27;, &#x27;discovery.k8s.io/v1&#x27;, &#x27;是 · Kubernetes 内置 API&#x27;, &#x27;保存 Service 后端端点集合&#x27;, &#x27;k8s&#x27;, sources.k8s],
-        ingressclass: [&#x27;IngressClass&#x27;, &#x27;Kubernetes SIG Network&#x27;, &#x27;networking.k8s.io/v1&#x27;, &#x27;是 · Kubernetes 内置 API&#x27;, &#x27;传统 Ingress 控制器类别；不是 GatewayClass&#x27;, &#x27;k8s&#x27;, sources.k8s],
-        ingress: [&#x27;Ingress&#x27;, &#x27;Kubernetes SIG Network&#x27;, &#x27;networking.k8s.io/v1&#x27;, &#x27;是 · Kubernetes 内置 API&#x27;, &#x27;传统 HTTP 入口 API；与 Gateway API 是两套模型&#x27;, &#x27;k8s&#x27;, sources.k8s],
-        secret: [&#x27;Secret&#x27;, &#x27;Kubernetes core&#x27;, &#x27;v1&#x27;, &#x27;是 · Kubernetes 内置 API&#x27;, &#x27;保存证书、API Key 与凭据&#x27;, &#x27;k8s&#x27;, sources.k8s],
-        configmap: [&#x27;ConfigMap&#x27;, &#x27;Kubernetes core&#x27;, &#x27;v1&#x27;, &#x27;是 · Kubernetes 内置 API&#x27;, &#x27;保存普通配置；EnvoyGateway 配置文档通常嵌在这里&#x27;, &#x27;k8s&#x27;, sources.k8s],
-        deployment: [&#x27;Deployment&#x27;, &#x27;Kubernetes SIG Apps&#x27;, &#x27;apps/v1&#x27;, &#x27;是 · Kubernetes 内置 API&#x27;, &#x27;常用于运行控制器、Envoy、EPP 与 vLLM&#x27;, &#x27;k8s&#x27;, sources.k8s],
-        statefulset: [&#x27;StatefulSet&#x27;, &#x27;Kubernetes SIG Apps&#x27;, &#x27;apps/v1&#x27;, &#x27;是 · Kubernetes 内置 API&#x27;, &#x27;运行需要稳定身份或存储的有状态组件&#x27;, &#x27;k8s&#x27;, sources.k8s],
-        daemonset: [&#x27;DaemonSet&#x27;, &#x27;Kubernetes SIG Apps&#x27;, &#x27;apps/v1&#x27;, &#x27;是 · Kubernetes 内置 API&#x27;, &#x27;在每个或选定 Node 上运行一个 Pod&#x27;, &#x27;k8s&#x27;, sources.k8s],
-        pod: [&#x27;Pod&#x27;, &#x27;Kubernetes core&#x27;, &#x27;v1&#x27;, &#x27;是 · Kubernetes 内置 API&#x27;, &#x27;运行 Envoy、EPP、vLLM 等容器的最小单元&#x27;, &#x27;k8s&#x27;, sources.k8s],
-        serviceaccount: [&#x27;ServiceAccount&#x27;, &#x27;Kubernetes core&#x27;, &#x27;v1&#x27;, &#x27;是 · Kubernetes 内置 API&#x27;, &#x27;Pod 的 Kubernetes 身份&#x27;, &#x27;k8s&#x27;, sources.k8s],
-        role: [&#x27;Role&#x27;, &#x27;Kubernetes SIG Auth&#x27;, &#x27;rbac.authorization.k8s.io/v1&#x27;, &#x27;是 · Kubernetes 内置 API&#x27;, &#x27;Namespace 范围 RBAC 权限&#x27;, &#x27;k8s&#x27;, sources.k8s],
-        rolebinding: [&#x27;RoleBinding&#x27;, &#x27;Kubernetes SIG Auth&#x27;, &#x27;rbac.authorization.k8s.io/v1&#x27;, &#x27;是 · Kubernetes 内置 API&#x27;, &#x27;把 Namespace 权限绑定给主体&#x27;, &#x27;k8s&#x27;, sources.k8s],
-        clusterrole: [&#x27;ClusterRole&#x27;, &#x27;Kubernetes SIG Auth&#x27;, &#x27;rbac.authorization.k8s.io/v1&#x27;, &#x27;是 · Kubernetes 内置 API&#x27;, &#x27;集群范围或可复用 RBAC 权限&#x27;, &#x27;k8s&#x27;, sources.k8s],
-        clusterrolebinding: [&#x27;ClusterRoleBinding&#x27;, &#x27;Kubernetes SIG Auth&#x27;, &#x27;rbac.authorization.k8s.io/v1&#x27;, &#x27;是 · Kubernetes 内置 API&#x27;, &#x27;把集群权限绑定给主体&#x27;, &#x27;k8s&#x27;, sources.k8s],
-        hpa: [&#x27;HorizontalPodAutoscaler&#x27;, &#x27;Kubernetes SIG Autoscaling&#x27;, &#x27;autoscaling/v2&#x27;, &#x27;是 · Kubernetes 内置 API&#x27;, &#x27;按指标水平扩缩工作负载&#x27;, &#x27;k8s&#x27;, sources.k8s],
-        pvc: [&#x27;PersistentVolumeClaim&#x27;, &#x27;Kubernetes core&#x27;, &#x27;v1&#x27;, &#x27;是 · Kubernetes 内置 API&#x27;, &#x27;申请持久化存储&#x27;, &#x27;k8s&#x27;, sources.k8s],
-        pdb: [&#x27;PodDisruptionBudget&#x27;, &#x27;Kubernetes SIG Apps&#x27;, &#x27;policy/v1&#x27;, &#x27;是 · Kubernetes 内置 API&#x27;, &#x27;限制自愿中断期间不可用 Pod 数&#x27;, &#x27;k8s&#x27;, sources.k8s],
-        networkpolicy: [&#x27;NetworkPolicy&#x27;, &#x27;Kubernetes SIG Network&#x27;, &#x27;networking.k8s.io/v1&#x27;, &#x27;是 · Kubernetes 内置 API&#x27;, &#x27;限制 Pod 网络流量&#x27;, &#x27;k8s&#x27;, sources.k8s],
-        xbackend: [&#x27;XBackend&#x27;, &#x27;Kubernetes SIG Network&#x27;, &#x27;gateway.networking.x-k8s.io/v1alpha1&#x27;, &#x27;否 · Gateway API 官方实验候选&#x27;, &#x27;实验性的 Gateway 原生外部后端抽象&#x27;, &#x27;experimental&#x27;, sources.gatewayx],
-        xbackendtrafficpolicy: [&#x27;XBackendTrafficPolicy&#x27;, &#x27;Kubernetes SIG Network&#x27;, &#x27;gateway.networking.x-k8s.io/v1alpha1&#x27;, &#x27;否 · Gateway API 官方实验候选&#x27;, &#x27;实验性的后端流量策略&#x27;, &#x27;experimental&#x27;, sources.gatewayx],
-        xmesh: [&#x27;XMesh&#x27;, &#x27;Kubernetes SIG Network&#x27;, &#x27;gateway.networking.x-k8s.io/v1alpha1&#x27;, &#x27;否 · Gateway API 官方实验候选&#x27;, &#x27;实验性的 GAMMA 服务网格范围对象&#x27;, &#x27;experimental&#x27;, sources.gatewayx],
-        &#x27;eg-backend&#x27;: [&#x27;Backend&#x27;, &#x27;Envoy Gateway&#x27;, &#x27;gateway.envoyproxy.io/v1alpha1&#x27;, &#x27;否 · Envoy Gateway 自定义 CRD&#x27;, &#x27;声明 Service 之外的后端端点与连接行为&#x27;, &#x27;eg&#x27;, sources.eg],
-        &#x27;eg-backendtrafficpolicy&#x27;: [&#x27;BackendTrafficPolicy&#x27;, &#x27;Envoy Gateway&#x27;, &#x27;gateway.envoyproxy.io/v1alpha1&#x27;, &#x27;否 · Envoy Gateway 自定义 CRD&#x27;, &#x27;配置 Gateway 到后端的负载均衡、超时、重试等&#x27;, &#x27;eg&#x27;, sources.eg],
-        &#x27;eg-clienttrafficpolicy&#x27;: [&#x27;ClientTrafficPolicy&#x27;, &#x27;Envoy Gateway&#x27;, &#x27;gateway.envoyproxy.io/v1alpha1&#x27;, &#x27;否 · Envoy Gateway 自定义 CRD&#x27;, &#x27;配置客户端到 Envoy Listener 的连接与 HTTP 行为&#x27;, &#x27;eg&#x27;, sources.eg],
-        &#x27;eg-extensionpolicy&#x27;: [&#x27;EnvoyExtensionPolicy&#x27;, &#x27;Envoy Gateway&#x27;, &#x27;gateway.envoyproxy.io/v1alpha1&#x27;, &#x27;否 · Envoy Gateway 自定义 CRD&#x27;, &#x27;挂载 ext-proc、Wasm、Lua 等 Envoy 扩展&#x27;, &#x27;eg&#x27;, sources.eg],
-        &#x27;eg-patchpolicy&#x27;: [&#x27;EnvoyPatchPolicy&#x27;, &#x27;Envoy Gateway&#x27;, &#x27;gateway.envoyproxy.io/v1alpha1&#x27;, &#x27;否 · Envoy Gateway 自定义 CRD&#x27;, &#x27;直接补丁生成后的 Envoy xDS 资源&#x27;, &#x27;eg&#x27;, sources.eg],
-        &#x27;eg-envoyproxy&#x27;: [&#x27;EnvoyProxy&#x27;, &#x27;Envoy Gateway&#x27;, &#x27;gateway.envoyproxy.io/v1alpha1&#x27;, &#x27;否 · Envoy Gateway 自定义 CRD&#x27;, &#x27;配置被管理的 Envoy 数据面部署与可观测性&#x27;, &#x27;eg&#x27;, sources.eg],
-        &#x27;eg-httproutefilter&#x27;: [&#x27;HTTPRouteFilter&#x27;, &#x27;Envoy Gateway&#x27;, &#x27;gateway.envoyproxy.io/v1alpha1&#x27;, &#x27;否 · Envoy Gateway 自定义 CRD&#x27;, &#x27;供 HTTPRoute ExtensionRef 引用的实现特定过滤器&#x27;, &#x27;eg&#x27;, sources.eg],
-        &#x27;eg-securitypolicy&#x27;: [&#x27;SecurityPolicy&#x27;, &#x27;Envoy Gateway&#x27;, &#x27;gateway.envoyproxy.io/v1alpha1&#x27;, &#x27;否 · Envoy Gateway 自定义 CRD&#x27;, &#x27;认证、授权、CORS 等入口安全策略&#x27;, &#x27;eg&#x27;, sources.eg],
-        &#x27;eg-envoygateway&#x27;: [&#x27;EnvoyGateway&#x27;, &#x27;Envoy Gateway&#x27;, &#x27;gateway.envoyproxy.io/v1alpha1&#x27;, &#x27;不是独立 K8s CRD；是启动配置文档的 kind&#x27;, &#x27;通常嵌入 envoy-gateway-config ConfigMap，用于控制面全局配置&#x27;, &#x27;runtime&#x27;, sources.eg],
-        &#x27;aig-route&#x27;: [&#x27;AIGatewayRoute&#x27;, &#x27;Envoy AI Gateway&#x27;, &#x27;aigateway.envoyproxy.io/v1beta1&#x27;, &#x27;否 · Envoy AI Gateway 自定义 CRD&#x27;, &#x27;统一 AI API 路由；控制器会生成 HTTPRoute 等资源&#x27;, &#x27;aig&#x27;, sources.aig],
-        &#x27;aig-backend&#x27;: [&#x27;AIServiceBackend&#x27;, &#x27;Envoy AI Gateway&#x27;, &#x27;aigateway.envoyproxy.io/v1beta1&#x27;, &#x27;否 · Envoy AI Gateway 自定义 CRD&#x27;, &#x27;描述模型供应商协议与目标后端&#x27;, &#x27;aig&#x27;, sources.aig],
-        &#x27;aig-security&#x27;: [&#x27;BackendSecurityPolicy&#x27;, &#x27;Envoy AI Gateway&#x27;, &#x27;aigateway.envoyproxy.io/v1beta1&#x27;, &#x27;否 · Envoy AI Gateway 自定义 CRD&#x27;, &#x27;配置发往 AI 后端的认证凭据&#x27;, &#x27;aig&#x27;, sources.aig],
-        &#x27;aig-config&#x27;: [&#x27;GatewayConfig&#x27;, &#x27;Envoy AI Gateway&#x27;, &#x27;aigateway.envoyproxy.io/v1beta1&#x27;, &#x27;否 · Envoy AI Gateway 自定义 CRD&#x27;, &#x27;配置 AI Gateway ext-proc 容器与网关级运行参数&#x27;, &#x27;aig&#x27;, sources.aig],
-        &#x27;aig-mcproute&#x27;: [&#x27;MCPRoute&#x27;, &#x27;Envoy AI Gateway&#x27;, &#x27;aigateway.envoyproxy.io/v1beta1&#x27;, &#x27;否 · Envoy AI Gateway 自定义 CRD&#x27;, &#x27;声明 MCP 请求到 MCP 后端的路由&#x27;, &#x27;aig&#x27;, sources.aig],
-        &#x27;aig-quota&#x27;: [&#x27;QuotaPolicy&#x27;, &#x27;Envoy AI Gateway&#x27;, &#x27;aigateway.envoyproxy.io/v1beta1&#x27;, &#x27;否 · Envoy AI Gateway 自定义 CRD&#x27;, &#x27;按 Token 使用量配置 AI 配额&#x27;, &#x27;aig&#x27;, sources.aig],
-        &#x27;llmd-objective&#x27;: [&#x27;InferenceObjective&#x27;, &#x27;llm-d Router&#x27;, &#x27;llm-d.ai/v1alpha2&#x27;, &#x27;否 · llm-d 自定义 CRD&#x27;, &#x27;定义池内请求优先级与服务目标；已从 GIE 迁入 llm-d&#x27;, &#x27;llmd&#x27;, sources.llmd],
-        &#x27;llmd-rewrite&#x27;: [&#x27;InferenceModelRewrite&#x27;, &#x27;llm-d Router&#x27;, &#x27;llm-d.ai/v1alpha2&#x27;, &#x27;否 · llm-d 自定义 CRD&#x27;, &#x27;模型名重写与池内流量拆分；已从 GIE 迁入 llm-d&#x27;, &#x27;llmd&#x27;, sources.llmd],
-        &#x27;llmd-pickerconfig&#x27;: [&#x27;EndpointPickerConfig&#x27;, &#x27;llm-d Router&#x27;, &#x27;llm-d.ai/v1alpha1 配置 schema&#x27;, &#x27;不是 Kubernetes CRD/资源 Kind&#x27;, &#x27;EPP 内部配置，通常放在 ConfigMap 或本地文件&#x27;, &#x27;runtime&#x27;, sources.llmd],
-        &#x27;runtime-eg-controller&#x27;: [&#x27;Envoy Gateway Controller&#x27;, &#x27;Envoy Gateway&#x27;, &#x27;—&#x27;, &#x27;不是 Kind · 运行组件&#x27;, &#x27;监听 Gateway API/扩展 CRD，并生成 Envoy xDS 与工作负载&#x27;, &#x27;runtime&#x27;, sources.eg],
-        &#x27;runtime-envoy&#x27;: [&#x27;Envoy Proxy&#x27;, &#x27;Envoy project&#x27;, &#x27;—&#x27;, &#x27;不是 Kind · 运行组件&#x27;, &#x27;数据面代理；在 Kubernetes 中通常由 Deployment/Pod 承载&#x27;, &#x27;runtime&#x27;, sources.eg],
-        &#x27;runtime-aig-controller&#x27;: [&#x27;AI Gateway Controller&#x27;, &#x27;Envoy AI Gateway&#x27;, &#x27;—&#x27;, &#x27;不是 Kind · 运行组件&#x27;, &#x27;把 AI Gateway CRD 翻译为 Gateway/Envoy Gateway 资源&#x27;, &#x27;runtime&#x27;, sources.aig],
-        &#x27;runtime-extproc&#x27;: [&#x27;AI ext-proc&#x27;, &#x27;Envoy AI Gateway&#x27;, &#x27;—&#x27;, &#x27;不是 Kind · 运行组件&#x27;, &#x27;处理 AI 协议转换、鉴权与用量元数据&#x27;, &#x27;runtime&#x27;, sources.aig],
-        &#x27;runtime-epp&#x27;: [&#x27;EPP / llm-d Router&#x27;, &#x27;llm-d / Gateway API Inference ecosystem&#x27;, &#x27;—&#x27;, &#x27;不是 Kind · 运行组件&#x27;, &#x27;根据负载、KV cache 等信号为 InferencePool 选择端点&#x27;, &#x27;runtime&#x27;, sources.llmd],
-        &#x27;runtime-bbr&#x27;: [&#x27;BBR&#x27;, &#x27;llm-d&#x27;, &#x27;—&#x27;, &#x27;不是 Kind · 运行组件&#x27;, &#x27;Body Based Router；解析请求体并辅助按模型路由&#x27;, &#x27;runtime&#x27;, sources.llmd],
-        &#x27;runtime-vllm&#x27;: [&#x27;vLLM&#x27;, &#x27;vLLM project&#x27;, &#x27;—&#x27;, &#x27;不是 Kind · 模型服务器&#x27;, &#x27;通常作为 Deployment/Pod 运行，并被 Service 或 InferencePool 选中&#x27;, &#x27;runtime&#x27;, &#x27;https://docs.vllm.ai/&#x27;],
-        &#x27;runtime-sglang&#x27;: [&#x27;SGLang&#x27;, &#x27;SGLang project&#x27;, &#x27;—&#x27;, &#x27;不是 Kind · 模型服务器&#x27;, &#x27;可作为 InferencePool 后端的模型服务运行时&#x27;, &#x27;runtime&#x27;, &#x27;https://docs.sglang.ai/&#x27;]
-      };
-
-      const colors = {
-        k8s: &#x27;var(--viz-series-1)&#x27;,
-        gie: &#x27;var(--viz-series-2)&#x27;,
-        experimental: &#x27;var(--viz-series-3)&#x27;,
-        eg: &#x27;var(--viz-series-4)&#x27;,
-        aig: &#x27;var(--viz-series-5)&#x27;,
-        llmd: &#x27;var(--viz-series-6)&#x27;,
-        runtime: &#x27;var(--muted-foreground)&#x27;
-      };
-
-      const name = root.querySelector(&#x27;#kind-map-name&#x27;);
-      const owner = root.querySelector(&#x27;#kind-map-owner&#x27;);
-      const status = root.querySelector(&#x27;#kind-map-status&#x27;);
-      const role = root.querySelector(&#x27;#kind-map-role&#x27;);
-      const dot = root.querySelector(&#x27;#kind-map-selection-dot&#x27;);
-      const source = root.querySelector(&#x27;#kind-map-source&#x27;);
-      const buttons = Array.from(root.querySelectorAll(&#x27;button[data-key]&#x27;));
-
-      function select(key) {
-        const item = items[key];
-        if (!item) return;
-        name.textContent = item[0];
-        owner.textContent = `${item[1]} · ${item[2]}`;
-        status.textContent = item[3];
-        role.textContent = item[4];
-        dot.style.background = colors[item[5]];
-        source.href = item[6];
-        buttons.forEach((button) =&gt; {
-          button.setAttribute(&#x27;aria-pressed&#x27;, button.dataset.key === key ? &#x27;true&#x27; : &#x27;false&#x27;);
-        });
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
       }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <div class="brand">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M4 6.5 12 2l8 4.5v9L12 20l-8-4.5z"/>
+            <path d="m8.5 9 3.5 2 3.5-2M12 11v4"/>
+          </svg>
+        </span>
+        Classic Site
+      </div>
+      <span class="home-label">HOME / 01</span>
+    </header>
 
-      buttons.forEach((button) =&gt; {
-        button.addEventListener(&#x27;click&#x27;, () =&gt; select(button.dataset.key));
-      });
+    <main>
+      <p class="eyebrow">Knowledge &amp; Tools</p>
+      <h1>从这里，快速抵达。</h1>
+      <p class="intro">汇集架构地图、技术视图与常用工具。选择下方入口，开始探索。</p>
 
-      select(&#x27;inferencepool&#x27;);
-    })();
-  &lt;/script&gt;
-&lt;/div&gt;
+      <div class="section-heading">
+        <h2>快捷入口</h2>
+        <span>01 item</span>
+      </div>
 
-&lt;script src=&quot;https://unpkg.com/@floating-ui/core@1.7.3/dist/floating-ui.core.umd.min.js&quot;&gt;&lt;/script&gt;
-&lt;script src=&quot;https://unpkg.com/@floating-ui/dom@1.7.4/dist/floating-ui.dom.umd.min.js&quot;&gt;&lt;/script&gt;
-&lt;script&gt;
-(() =&gt; {
-  if (window.FloatingUIDOM == null) {
-    return;
-  }
-  const { autoUpdate, computePosition, flip, offset, shift, size } =
-    window.FloatingUIDOM;
-  const tooltipPlacements = new Set([&quot;top&quot;, &quot;right&quot;, &quot;bottom&quot;, &quot;left&quot;]);
-  const tooltipId = `codex-visualization-tooltip-${
-    window.crypto?.randomUUID?.() ?? Date.now().toString(36)
-  }`;
-  const tooltipGap = 5;
-  const hoverDelay = 700;
-  const skipDelay = 300;
-  let activeTrigger = null;
-  let pendingTrigger = null;
-  let tooltip = null;
-  let openTimeout = null;
-  let autoUpdateCleanup = null;
-  let positionRequest = 0;
-  let skipDelayUntil = 0;
+      <a class="shortcut" href="kubernetes-ai-gateway-kind-map.html" aria-label="打开 Kubernetes AI Gateway Kind 归属地图">
+        <div class="shortcut-content">
+          <div>
+            <span class="tag">交互地图</span>
+            <h3>Kubernetes AI Gateway<br>Kind 归属地图</h3>
+            <p>梳理 Kubernetes、Gateway API、Envoy Gateway 与 AI Gateway 生态中的资源 Kind、所属项目及依赖关系。</p>
+          </div>
+          <span class="open-link">
+            打开地图
+            <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+              <path d="M4 10h12M11 5l5 5-5 5"/>
+            </svg>
+          </span>
+        </div>
 
-  const getTrigger = (target) =&gt;
-    target?.nodeType === Node.ELEMENT_NODE
-      ? target.closest(&quot;[data-tooltip]&quot;)
-      : null;
-  const containsTarget = (trigger, target) =&gt;
-    target?.nodeType != null &amp;&amp; trigger.contains(target);
-  const getContent = (trigger) =&gt;
-    trigger.getAttribute(&quot;data-tooltip&quot;)?.trim() ?? &quot;&quot;;
-  const getPlacement = (trigger) =&gt; {
-    const placement = trigger.getAttribute(&quot;data-tooltip-placement&quot;);
-    return tooltipPlacements.has(placement) ? placement : &quot;top&quot;;
-  };
-  const getTooltip = () =&gt; {
-    if (tooltip == null) {
-      tooltip = document.createElement(&quot;div&quot;);
-      tooltip.id = tooltipId;
-      tooltip.className = &quot;tooltip&quot;;
-      tooltip.setAttribute(&quot;role&quot;, &quot;tooltip&quot;);
-    }
-    return tooltip;
-  };
-  const setDescribedBy = (trigger, described) =&gt; {
-    const ids = new Set(
-      (trigger.getAttribute(&quot;aria-describedby&quot;) ?? &quot;&quot;)
-        .split(/\s+/)
-        .filter(Boolean),
-    );
-    if (described) {
-      ids.add(tooltipId);
-    } else {
-      ids.delete(tooltipId);
-    }
-    if (ids.size === 0) {
-      trigger.removeAttribute(&quot;aria-describedby&quot;);
-    } else {
-      trigger.setAttribute(&quot;aria-describedby&quot;, [...ids].join(&quot; &quot;));
-    }
-  };
-  const clearOpenTimeout = () =&gt; {
-    if (openTimeout != null) {
-      window.clearTimeout(openTimeout);
-      openTimeout = null;
-    }
-    pendingTrigger = null;
-  };
-  const closeTooltip = (activateSkipDelay = true) =&gt; {
-    clearOpenTimeout();
-    positionRequest += 1;
-    autoUpdateCleanup?.();
-    autoUpdateCleanup = null;
-    if (activeTrigger == null) {
-      return;
-    }
-    setDescribedBy(activeTrigger, false);
-    activeTrigger = null;
-    tooltip?.remove();
-    if (activateSkipDelay) {
-      skipDelayUntil = Date.now() + skipDelay;
-    }
-  };
-  const updatePosition = (trigger, floating) =&gt; {
-    const request = ++positionRequest;
-    void computePosition(trigger, floating, {
-      middleware: [
-        offset(tooltipGap),
-        flip({ padding: tooltipGap }),
-        shift({ padding: tooltipGap }),
-        size({
-          padding: tooltipGap,
-          apply({ availableHeight, availableWidth, elements }) {
-            elements.floating.style.setProperty(
-              &quot;--tooltip-available-width&quot;,
-              `${Math.max(0, availableWidth)}px`,
-            );
-            elements.floating.style.setProperty(
-              &quot;--tooltip-available-height&quot;,
-              `${Math.max(0, availableHeight)}px`,
-            );
-          },
-        }),
-      ],
-      placement: getPlacement(trigger),
-      strategy: &quot;fixed&quot;,
-    })
-      .then(({ x, y }) =&gt; {
-        if (activeTrigger !== trigger || request !== positionRequest) {
-          return;
-        }
-        const scale = window.devicePixelRatio || 1;
-        floating.style.transform = `translate(${Math.round(x * scale) / scale}px, ${Math.round(y * scale) / scale}px)`;
-        floating.style.visibility = &quot;visible&quot;;
-      })
-      .catch(() =&gt; {
-        if (activeTrigger === trigger &amp;&amp; request === positionRequest) {
-          closeTooltip(false);
-        }
-      });
-  };
-  const openTooltip = (trigger) =&gt; {
-    const content = getContent(trigger);
-    if (!trigger.isConnected || content.length === 0) {
-      return;
-    }
-    clearOpenTimeout();
-    if (activeTrigger === trigger) {
-      return;
-    }
-    closeTooltip();
-    const floating = getTooltip();
-    floating.textContent = content;
-    floating.style.visibility = &quot;hidden&quot;;
-    floating.style.transform = &quot;translate(0, 0)&quot;;
-    document.body.appendChild(floating);
-    activeTrigger = trigger;
-    setDescribedBy(trigger, true);
-    autoUpdateCleanup = autoUpdate(trigger, floating, () =&gt; {
-      updatePosition(trigger, floating);
-    });
-  };
-  const requestOpen = (trigger, immediate = false) =&gt; {
-    if (
-      getContent(trigger).length === 0 ||
-      activeTrigger === trigger ||
-      pendingTrigger === trigger
-    ) {
-      return;
-    }
-    clearOpenTimeout();
-    pendingTrigger = trigger;
-    const delay =
-      immediate || activeTrigger != null || Date.now() &lt; skipDelayUntil
-        ? 0
-        : hoverDelay;
-    if (delay === 0) {
-      openTooltip(trigger);
-      return;
-    }
-    openTimeout = window.setTimeout(() =&gt; {
-      openTimeout = null;
-      pendingTrigger = null;
-      openTooltip(trigger);
-    }, delay);
-  };
-  const handlePointerOpen = (event) =&gt; {
-    if (event.pointerType === &quot;touch&quot;) {
-      return;
-    }
-    const trigger = getTrigger(event.target);
-    if (trigger == null || containsTarget(trigger, event.relatedTarget)) {
-      return;
-    }
-    requestOpen(trigger);
-  };
-  const handleLeave = (event) =&gt; {
-    const trigger = getTrigger(event.target);
-    if (trigger == null || containsTarget(trigger, event.relatedTarget)) {
-      return;
-    }
-    if (activeTrigger === trigger || pendingTrigger === trigger) {
-      closeTooltip();
-    }
-  };
-  const handleFocusIn = (event) =&gt; {
-    const trigger = getTrigger(event.target);
-    if (trigger?.matches(&quot;:focus-visible&quot;)) {
-      requestOpen(trigger, true);
-    }
-  };
-  const handleKeyDown = (event) =&gt; {
-    if (event.key === &quot;Escape&quot;) {
-      closeTooltip();
-    }
-  };
-  const handleContextMenu = (event) =&gt; {
-    const trigger = getTrigger(event.target);
-    if (activeTrigger === trigger || pendingTrigger === trigger) {
-      closeTooltip();
-    }
-  };
-  const destroy = () =&gt; {
-    closeTooltip(false);
-    document.removeEventListener(&quot;pointerover&quot;, handlePointerOpen);
-    document.removeEventListener(&quot;pointerout&quot;, handleLeave);
-    document.removeEventListener(&quot;focusin&quot;, handleFocusIn);
-    document.removeEventListener(&quot;focusout&quot;, handleLeave);
-    document.removeEventListener(&quot;keydown&quot;, handleKeyDown);
-    document.removeEventListener(&quot;contextmenu&quot;, handleContextMenu);
-    tooltip = null;
-  };
+        <div class="visual" aria-hidden="true">
+          <svg class="network" viewBox="0 0 220 276" fill="none">
+            <g stroke="#7da4ff" stroke-opacity=".48" stroke-width="1.2">
+              <path d="M35 54 104 91l69-43M104 91l8 91M35 54l12 142 65-14 61-134 12 154-73-20"/>
+              <path d="m47 196 138 6M35 54l138-6" stroke-dasharray="4 5"/>
+            </g>
+            <g fill="#326ce5" stroke="#b8ccff" stroke-width="2">
+              <circle cx="35" cy="54" r="8"/>
+              <circle cx="173" cy="48" r="7"/>
+              <circle cx="104" cy="91" r="11"/>
+              <circle cx="47" cy="196" r="7"/>
+              <circle cx="112" cy="182" r="10"/>
+              <circle cx="185" cy="202" r="8"/>
+            </g>
+            <g fill="#fff">
+              <circle cx="35" cy="54" r="2"/>
+              <circle cx="173" cy="48" r="2"/>
+              <circle cx="104" cy="91" r="3"/>
+              <circle cx="47" cy="196" r="2"/>
+              <circle cx="112" cy="182" r="3"/>
+              <circle cx="185" cy="202" r="2"/>
+            </g>
+          </svg>
+        </div>
+      </a>
+    </main>
 
-  document.addEventListener(&quot;pointerover&quot;, handlePointerOpen);
-  document.addEventListener(&quot;pointerout&quot;, handleLeave);
-  document.addEventListener(&quot;focusin&quot;, handleFocusIn);
-  document.addEventListener(&quot;focusout&quot;, handleLeave);
-  document.addEventListener(&quot;keydown&quot;, handleKeyDown);
-  document.addEventListener(&quot;contextmenu&quot;, handleContextMenu);
-  window.addEventListener(&quot;pagehide&quot;, destroy, { once: true });
-})();
-&lt;/script&gt;
-&lt;script id=&quot;codex-visualization-lucide&quot; async src=&quot;https://unpkg.com/lucide@1.17.0/dist/umd/lucide.js&quot;&gt;&lt;/script&gt;
-&lt;script&gt;
-(() =&gt; {
-  const initialize = () =&gt; {
-    globalThis.lucide?.createIcons({ attrs: { width: 16, height: 16 } });
-  };
-  if (globalThis.lucide != null) {
-    initialize();
-    return;
-  }
-  document
-    .getElementById(&quot;codex-visualization-lucide&quot;)
-    ?.addEventListener(&quot;load&quot;, initialize, { once: true });
-})();
-&lt;/script&gt;
-
-&lt;/body&gt;
-&lt;/html&gt;
-"></iframe>
+    <footer>
+      <span>Built for clear thinking.</span>
+      <span>Classic Site · Home</span>
+    </footer>
+  </div>
 </body>
 </html>
